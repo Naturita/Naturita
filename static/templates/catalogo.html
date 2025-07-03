@@ -569,9 +569,10 @@
     <div class="aviso-envio" id="aviso-envio">
         <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
     </div>
-    <div id="retiro-sucursal" style="display:none;">
-        <label><input type="radio" name="retiro" value="Sucursal Centro"> Sucursal Centro</label><br>
-        <label><input type="radio" name="retiro" value="Sucursal Norte"> Sucursal Norte</label>
+    <div id="retiro-sucursal" style="display: none; margin-top: 10px;">
+        <label>¿Retirar en sucursal Naturita?</label><br>
+        <label><input type="radio" name="retiro" value="Sí"> Sí</label>
+        <label><input type="radio" name="retiro" value="No" checked> No</label>
     </div>
 
     <div class="whatsapp" onclick="enviarWhatsApp()">Enviar 🛒 CARRITO 🛒 por WhatsApp</div>
@@ -608,10 +609,12 @@
 
         document.getElementById('total-general').textContent = 'Total: $' + total.toFixed(2);
 
+        // Mostrar mensaje de envío
+        const avisoEnvio = document.getElementById('aviso-envio');
         if (total >= 10000) {
             avisoEnvio.textContent = '🎉 ¡Felicidades! Pasaste los $10.000, tenés envío a domicilio si sos de la zona.';
             avisoEnvio.style.color = 'green';
-            // Mostrar opciones de retiro
+        // Mostrar opciones de retiro
             document.getElementById('retiro-sucursal').style.display = 'block';
         } else {
             avisoEnvio.textContent = '📦 Te falta poco para llegar a $10.000 y tener tu envio gratis si sos de la zona!';
