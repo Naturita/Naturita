@@ -224,14 +224,202 @@
         .card {
             transition: all 0.3s ease;
         }
-
         .logo {
-            width: 400px;
-            height: 400px;
-            vertical-align: middle;
-            margin-right: 8px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: none;
+
+            /* Centramos en pantalla */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .modal-body img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .modal-body h3 {
+            margin-bottom: 10px;
+            color: #388e3c;
+        }
+
+        .modal-body p {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .card .button {
+            pointer-events: none;
+        }
+
+        .modal-body button.agregar-carrito {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .modal-body input[type="number"] {
+            width: 60px;
+            padding: 6px;
+            margin-top: 5px;
+        }
+
+
+        .carrito {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 700px;
+            height: 100%;
+            background: white;
+            box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+            transition: right 0.3s;
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .carrito.visible {
+            right: 0;
+        }
+
+        .carrito h2 {
+            margin-bottom: 20px;
+        }
+
+        .carrito table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .carrito th, .carrito td {
+            border-bottom: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .carrito input[type="number"] {
+            width: 60px;
+        }
+
+        .carrito .total {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        .carrito .cerrar {
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            float: right;
+            cursor: pointer;
+        }
+
+        .carrito .whatsapp {
+            background: #25D366;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .abrir-carrito {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1500;
+        }
+
+        .carrito .aviso-envio {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid #ffeeba;
+            border-radius: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .carrito .aviso-envio i {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 600px) {
+            .carrito {
+                width: 100% !important;
+                padding: 15px;
+            }
+
+            .carrito table {
+                font-size: 0.9em;
+            }
+
+            .abrir-carrito {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+
+            .carrito .cerrar {
+                width: 26px;
+                height: 26px;
+                font-size: 1em;
+            }
+        }
 
     </style>
 </head>
@@ -245,87 +433,371 @@
 </header>
 
 <nav>
-    <a href="../../index.html" >Inicio</a>
-    <a href="#catalogo"  >Catálogo</a>
+    <a href="../../index.html">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
     <a href="#pedidos">Pedidos</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
-    <div class="container" style="text-align: center;">
-        <input type="text" id="buscador" placeholder="Buscar productos..." style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
+<div class="container" style="text-align: center;">
+    <input type="text" id="buscador" placeholder="Buscar productos..." style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
+</div>
+
+<div class="catalogo-grid">
+    <div class="card"
+        data-precio="$2500 el kilo"
+        data-cantidad="1kg"
+        data-extra="Producto sin gluten, rico en omega 3.">
+        <img src="../../imagenes/descarga1.jpeg" alt="Chía orgánica">
+        <h3>🌱 Chia organica</h3>
+        <p>Fuente de omega 3, ideal para tus desayunos y smoothies.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Chía%20orgánica" target="_blank" class="button">💬 Consultar</a>
     </div>
 
-
-    <div class="catalogo-grid">
-        <div class="card">
-            <img src="../../imagenes/descarga1.jpeg" alt="Chía orgánica">
-            <h3>🌱 Chía orgánica</h3>
-            <p>Fuente de omega 3, ideal para tus desayunos y smoothies.</p>
-            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Chía%20orgánica" target="_blank" class="button">💬 Consultar</a>
-        </div>
-
-        <div class="card">
-            <img src="../../imagenes/descarga2.jpeg" alt="Jengibre en polvo">
-            <h3>🧡 Jengibre en polvo</h3>
-            <p>Propiedades antiinflamatorias, ideal para infusiones y cocina.</p>
-            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Jengibre%20en%20polvo" target="_blank" class="button">💬 Consultar</a>
-        </div>
-
-        <div class="card">
-            <img src="../../imagenes/descarga3.jpeg" alt="Miel artesanal">
-            <h3>🍯 Miel artesanal</h3>
-            <p>Sin procesar, pura, local y llena de antioxidantes.</p>
-            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Miel%20artesanal" target="_blank" class="button">💬 Consultar</a>
-        </div>
-
-        <div class="card">
-            <img src="../../imagenes/descarga4.jpeg" alt="Vitamina C en polvo">
-            <h3>💪 Vitamina C en polvo</h3>
-            <p>Refuerzo natural para tu sistema inmunológico.</p>
-            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
-        </div>
-
-        <div class="card">
-            <img src="../../imagenes/descarga4.jpeg" alt="Vitamina C en polvo">
-            <h3>💪 Vitamina C en polvo</h3>
-            <p>Refuerzo natural para tu sistema inmunológico.</p>
-            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
-        </div>
-
-        <div class="card">
-            <img src="../../imagenes/descarga4.jpeg" alt="Vitamina C en polvo">
-            <h3>💪 Vitamina C en polvo</h3>
-            <p>Refuerzo natural para tu sistema inmunológico.</p>
-            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
-        </div>
-
-        <div class="card">
-            <img src="../../imagenes/descarga4.jpeg" alt="Vitamina C en polvo">
-            <h3>💪 Vitamina C en polvo</h3>
-            <p>Refuerzo natural para tu sistema inmunológico.</p>
-            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
-        </div>
-
-        <div class="card">
-            <img src="../../imagenes/descarga1.jpeg" alt="Jengibre en polvo">
-            <h3>🧡 Jengibre en polvo</h3>
-            <p>Propiedades antiinflamatorias, ideal para infusiones y cocina.</p>
-            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Jengibre%20en%20polvo" target="_blank" class="button">💬 Consultar</a>
-        </div>
-        
+    <div class="card"
+        data-precio="$1800"
+        data-cantidad="250g"
+        data-extra="Anti-inflamatorio natural. Ideal en infusiones.">
+        <img src="../../imagenes/descarga2.jpeg" alt="Jengibre en polvo">
+        <h3>🌿 Jengibre en polvo</h3>
+        <p>Propiedades antiinflamatorias, ideal para infusiones y cocina.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Jengibre%20en%20polvo" target="_blank" class="button">💬 Consultar</a>
     </div>
 
-    <script>
-        document.getElementById("buscador").addEventListener("input", function () {
-            const valor = this.value.toLowerCase();
-            const tarjetas = document.querySelectorAll(".catalogo-grid .card");
+    <div class="card"
+        data-precio="$3200"
+        data-cantidad="500g"
+        data-extra="Miel pura y local, sin procesos industriales.">
+        <img src="../../imagenes/descarga3.jpeg" alt="Miel artesanal">
+        <h3>🍯 Miel artesanal</h3>
+        <p>Sin procesar, pura, local y llena de antioxidantes.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Miel%20artesanal" target="_blank" class="button">💬 Consultar</a>
+    </div>
 
-            tarjetas.forEach(card => {
-                const texto = card.textContent.toLowerCase();
-                card.style.display = texto.includes(valor) ? "block" : "none";
+    <div class="card"
+        data-precio="$2000"
+        data-cantidad="100g"
+        data-extra="Suplemento vitamínico natural. Potente antioxidante.">
+        <img src="../../imagenes/descarga4.jpeg" alt="Vitamina C en polvo">
+        <h3>💪 Vitamina C en polvo</h3>
+        <p>Refuerzo natural para tu sistema inmunológico.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
+    </div>
+
+        <div class="card"
+        data-precio="$2500 el kilo"
+        data-cantidad="1kg"
+        data-extra="Producto sin gluten, rico en omega 3.">
+        <img src="../../imagenes/descarga1.jpeg" alt="Chía orgánica">
+        <h3>🌱 Chia organica</h3>
+        <p>Fuente de omega 3, ideal para tus desayunos y smoothies.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Chía%20orgánica" target="_blank" class="button">💬 Consultar</a>
+    </div>
+
+    <div class="card"
+        data-precio="$1800"
+        data-cantidad="250g"
+        data-extra="Anti-inflamatorio natural. Ideal en infusiones.">
+        <img src="../../imagenes/descarga2.jpeg" alt="Jengibre en polvo">
+        <h3>🌿 Jengibre en polvo</h3>
+        <p>Propiedades antiinflamatorias, ideal para infusiones y cocina.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Jengibre%20en%20polvo" target="_blank" class="button">💬 Consultar</a>
+    </div>
+
+    <div class="card"
+        data-precio="$3200"
+        data-cantidad="500g"
+        data-extra="Miel pura y local, sin procesos industriales.">
+        <img src="../../imagenes/descarga3.jpeg" alt="Miel artesanal">
+        <h3>🍯 Miel artesanal</h3>
+        <p>Sin procesar, pura, local y llena de antioxidantes.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Miel%20artesanal" target="_blank" class="button">💬 Consultar</a>
+    </div>
+
+    <div class="card"
+        data-precio="$2000"
+        data-cantidad="100g"
+        data-extra="Suplemento vitamínico natural. Potente antioxidante.">
+        <img src="../../imagenes/descarga4.jpeg" alt="Vitamina C en polvo">
+        <h3>💪 Vitamina C en polvo</h3>
+        <p>Refuerzo natural para tu sistema inmunológico.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal-producto">
+    <div class="modal-content">
+        <span class="close-btn" id="cerrar-modal">&times;</span>
+        <div class="modal-body">
+            <img id="modal-img" src="" alt="Imagen del producto">
+            <h3 id="modal-titulo">Título</h3>
+            <p id="modal-descripcion">Descripción detallada del producto...</p>
+            <p id="modal-precio"></p>
+            <p id="modal-cantidad"></p>
+            <p id="modal-extra"></p>
+            <label>Cantidad: <input type="number" id="cantidad-agregar" min="1" value="1"></label><br>
+            <button class="agregar-carrito" onclick="agregarDesdeModal()">Agregar al carrito</button>
+            <a id="modal-link" href="#" target="_blank" class="button">💬 Consultar por WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<!-- Botón abrir carrito -->
+<div class="abrir-carrito" onclick="document.getElementById('carrito').classList.add('visible')">
+    🛒 Ver Carrito
+</div>
+
+<!-- Carrito -->
+<div id="carrito" class="carrito">
+    <button class="cerrar" onclick="document.getElementById('carrito').classList.remove('visible')">&times;</button>
+    <h2>Carrito de Compras</h2>
+    <table id="tabla-carrito">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cant.</th>
+                <th>Unidad</th>
+                <th>Total</th>
+                <th>X</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="total" id="total-general">Total: $0</div>
+    
+    <div class="aviso-envio" id="aviso-envio">
+        <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
+    </div>
+    <div class="whatsapp" onclick="enviarWhatsApp()">Enviar por WhatsApp</div>
+</div>
+
+<script>
+    const carrito = [];
+    let modalProducto = {};
+
+    function agregarAlCarrito(nombre, precioUnitario, unidad, cantidad) {
+        carrito.push({ nombre, precioUnitario, unidad, cantidad });
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const tbody = document.querySelector('#tabla-carrito tbody');
+        tbody.innerHTML = '';
+        let total = 0;
+
+        carrito.forEach((item, i) => {
+            const tr = document.createElement('tr');
+            const precio = (item.precioUnitario * item.cantidad).toFixed(2);
+            total += parseFloat(precio);
+
+            tr.innerHTML = `
+                <td>${item.nombre}</td>
+                <td><input type="number" min="1" value="${item.cantidad}" onchange="cambiarCantidad(${i}, this.value)"></td>
+                <td>${item.unidad}</td>
+                <td>$${precio}</td>
+                <td><button onclick="eliminarDelCarrito(${i})">❌</button></td>
+            `;
+            tbody.appendChild(tr);
+        });
+
+        document.getElementById('total-general').textContent = 'Total: $' + total.toFixed(2);
+
+        // Mostrar mensaje de envío
+        const avisoEnvio = document.getElementById('aviso-envio');
+        if (total >= 10000) {
+            avisoEnvio.textContent = '🎉 ¡Felicidades! Pasaste los $10.000, tenés envío a domicilio si sos de la zona.';
+            avisoEnvio.style.color = 'green';
+        } else {
+            avisoEnvio.textContent = '📦 Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!';
+            avisoEnvio.style.color = 'black';
+        }
+    }
+
+    function cambiarCantidad(i, nuevaCantidad) {
+        carrito[i].cantidad = parseFloat(nuevaCantidad);
+        actualizarCarrito();
+    }
+
+    function eliminarDelCarrito(i) {
+        carrito.splice(i, 1);
+        actualizarCarrito();
+    }
+
+    function enviarWhatsApp() {
+        let mensaje = '🛒 Pedido Naturita:%0A';
+        let total = 0;
+
+        carrito.forEach(item => {
+            const subtotal = (item.precioUnitario * item.cantidad).toFixed(2);
+            mensaje += `• ${item.nombre} - ${item.cantidad} - ${item.unidad}: $${subtotal}%0A`;
+            total += parseFloat(subtotal);
+        });
+
+        mensaje += `%0ATotal: $${total.toFixed(2)}`;
+        const numero = '3513284231';
+        window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+
+        // Limpiar carrito luego de enviar
+        carrito.length = 0;
+        actualizarCarrito();
+        document.getElementById('carrito').classList.remove('visible');
+    }
+
+    function agregarDesdeModal() {
+        const cantidad = parseFloat(document.getElementById('cantidad-agregar').value);
+        if (!modalProducto || !modalProducto.precioUnitario || !modalProducto.unidad) return;
+        agregarAlCarrito(modalProducto.nombre, modalProducto.precioUnitario, modalProducto.unidad, cantidad);
+        document.getElementById('modal-producto').style.display = 'none';
+    }
+
+    // Buscador
+    document.getElementById("buscador").addEventListener("input", function () {
+        const valor = this.value.toLowerCase();
+        const tarjetas = document.querySelectorAll(".catalogo-grid .card");
+
+        tarjetas.forEach(card => {
+            const texto = card.textContent.toLowerCase();
+            card.style.display = texto.includes(valor) ? "block" : "none";
+        });
+    });
+
+    // Modal y lógica de click en tarjetas
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('modal-producto');
+        const cerrarModal = document.getElementById('cerrar-modal');
+
+        const modalImg = document.getElementById('modal-img');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalDescripcion = document.getElementById('modal-descripcion');
+        const modalPrecio = document.getElementById('modal-precio');
+        const modalCantidad = document.getElementById('modal-cantidad');
+        const modalExtra = document.getElementById('modal-extra');
+        const modalLink = document.getElementById('modal-link');
+
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.querySelector('img').src;
+                const titulo = card.querySelector('h3').textContent;
+                const descripcion = card.querySelector('p').textContent;
+                const link = card.querySelector('a.button').href;
+
+                const precioTexto = card.dataset.precio || '$0';
+                const cantidadTexto = card.dataset.cantidad || '';
+                const extra = card.dataset.extra || '';
+
+                const precioMatch = precioTexto.match(/\$(\d+(\.\d+)?)/);
+                const unidadMatch = cantidadTexto.match(/(\d+)?\s*([a-zA-Z]+)/);
+
+                const precioUnitario = precioMatch ? parseFloat(precioMatch[1]) : 0;
+                const unidad = unidadMatch ? unidadMatch[2] : 'u';
+
+                modalImg.src = imgSrc;
+                modalTitulo.textContent = titulo;
+                modalDescripcion.textContent = descripcion;
+                modalPrecio.textContent = precioTexto;
+                modalCantidad.textContent = cantidadTexto;
+                modalExtra.textContent = extra;
+                modalLink.href = link;
+
+                modalProducto = {
+                    nombre: titulo,
+                    precioUnitario: precioUnitario,
+                    unidad: cantidadTexto || 'u'
+                };
+
+
+                document.getElementById('cantidad-agregar').value = 1;
+                modal.style.display = 'block';
             });
         });
-    </script>
+
+        cerrarModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+
+<script>
+    document.getElementById("buscador").addEventListener("input", function () {
+        const valor = this.value.toLowerCase();
+        const tarjetas = document.querySelectorAll(".catalogo-grid .card");
+
+        tarjetas.forEach(card => {
+            const texto = card.textContent.toLowerCase();
+            card.style.display = texto.includes(valor) ? "block" : "none";
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('modal-producto');
+        const cerrarModal = document.getElementById('cerrar-modal');
+
+        const modalImg = document.getElementById('modal-img');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalDescripcion = document.getElementById('modal-descripcion');
+        const modalPrecio = document.getElementById('modal-precio');
+        const modalCantidad = document.getElementById('modal-cantidad');
+        const modalExtra = document.getElementById('modal-extra');
+        const modalLink = document.getElementById('modal-link');
+
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.querySelector('img').src;
+                const titulo = card.querySelector('h3').textContent;
+                const descripcion = card.querySelector('p').textContent;
+                const link = card.querySelector('a.button').href;
+
+                const precio = card.dataset.precio || '';
+                const cantidad = card.dataset.cantidad || '';
+                const extra = card.dataset.extra || '';
+
+                modalImg.src = imgSrc;
+                modalTitulo.textContent = titulo;
+                modalDescripcion.textContent = descripcion;
+                modalPrecio.textContent = precio;
+                modalCantidad.textContent = cantidad;
+                modalExtra.textContent = extra;
+                modalLink.href = link;
+
+                modal.style.display = 'block';
+            });
+        });
+
+        cerrarModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
 
 <footer id="contacto">
     <p>&copy; 2025 NATURITA - La Calera, Córdoba</p>
