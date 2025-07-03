@@ -569,7 +569,7 @@
     <div class="aviso-envio" id="aviso-envio">
         <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
     </div>
-    <div class="whatsapp" onclick="enviarWhatsApp()">Enviar por WhatsApp</div>
+    <div class="whatsapp" onclick="enviarWhatsApp()">Enviar 🛒CARRITO🛒 por WhatsApp</div>
 </div>
 
 <script>
@@ -635,6 +635,8 @@
         });
 
         mensaje += `%0ATotal: $${total.toFixed(2)}`;
+        mensaje += `%0AReservar pedido a nombre de:`;
+
         const numero = '3513284231';
         window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
 
