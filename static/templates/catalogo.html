@@ -634,7 +634,7 @@
             total += parseFloat(subtotal);
         });
 
-        mensaje += `%0ATotal: $${total.toFixed(2)}`;
+        mensaje += `Total: $${total.toFixed(2)}%0A`;
         mensaje = '%0A📝 Pedido a Nombre de:';
         const numero = '3513284231';
         window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
