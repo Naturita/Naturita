@@ -440,10 +440,10 @@
 </nav>
 
 <div class="container" style="text-align: center;">
-    <input href="#catalogo" type="text" id="buscador" placeholder="Buscar productos..." style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
+    <input type="text" id="buscador" placeholder="Buscar productos..." style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
 </div>
 
-<div class="catalogo-grid">
+<div href="#catalogo" class="catalogo-grid">
     <div class="card"
         data-precio="$2500 el kilo"
         data-cantidad="1kg"
@@ -569,6 +569,11 @@
     <div class="aviso-envio" id="aviso-envio">
         <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
     </div>
+    <div id="retiro-sucursal" style="display:none;">
+        <label><input type="radio" name="retiro" value="Sucursal Centro"> Sucursal Centro</label><br>
+        <label><input type="radio" name="retiro" value="Sucursal Norte"> Sucursal Norte</label>
+    </div>
+
     <div class="whatsapp" onclick="enviarWhatsApp()">Enviar 🛒 CARRITO 🛒 por WhatsApp</div>
 </div>
 
