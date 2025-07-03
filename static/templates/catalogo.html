@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Naturita - Tu Dietética en La Calera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #f4fdf4;
+            color: #2d4436;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #c1dfc4, #deecdd);
+            text-align: center;
+            padding: 80px 20px 60px;
+            color: #1c3a2c;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background: #4caf50;
+            border-radius: 5px;
+        }
+
+        header h1 {
+            font-size: 3.2em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #4caf50;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 18px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c8f7c5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #2e8b57;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .button:hover {
+            background: #206b42;
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2e4d32;
+        }
+
+        .producto {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            animation: fadeUp 1s ease;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .producto h3 {
+            color: #388e3c;
+            font-size: 1.5em;
+        }
+
+        .producto p {
+            margin: 10px 0;
+            font-size: 1.05em;
+        }
+
+        .producto a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #2e8b57;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .producto a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin: 12px 0;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #e0f2e9;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 50px;
+            color: #4f772d;
+            font-size: 0.95em;
+            border-top: 2px solid #cce4d4;
+        }
+
+        footer i {
+            margin: 0 10px;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        footer i:hover {
+            color: #2e8b57;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        .catalogo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center; /* <- Esto centra la última si está sola */
+        }
+
+
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            flex: 1 1 280px;
+            max-width: 320px;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            width: 400px;
+            height: 400px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>
+        <img class="logo" src="/imagenes/logo.png" alt="Logo Naturita">
+    </h1>
+    <p>Tu Dietética en La Calera</p>
+</header>
+
+<nav>
+    <a href="../../index.html" >Inicio</a>
+    <a href="#catalogo"  >Catálogo</a>
+    <a href="#pedidos">Pedidos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+    <div class="container" style="text-align: center;">
+        <input type="text" id="buscador" placeholder="Buscar productos..." style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
+    </div>
+
+
+    <div class="catalogo-grid">
+        <div class="card">
+            <img src="/imagenes/descarga (1).jpeg" alt="Chía orgánica">
+            <h3>🌱 Chía orgánica</h3>
+            <p>Fuente de omega 3, ideal para tus desayunos y smoothies.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Chía%20orgánica" target="_blank" class="button">💬 Consultar</a>
+        </div>
+
+        <div class="card">
+            <img src="/imagenes/descarga (2).jpeg" alt="Jengibre en polvo">
+            <h3>🧡 Jengibre en polvo</h3>
+            <p>Propiedades antiinflamatorias, ideal para infusiones y cocina.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Jengibre%20en%20polvo" target="_blank" class="button">💬 Consultar</a>
+        </div>
+
+        <div class="card">
+            <img src="/imagenes/descarga (3).jpeg" alt="Miel artesanal">
+            <h3>🍯 Miel artesanal</h3>
+            <p>Sin procesar, pura, local y llena de antioxidantes.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Miel%20artesanal" target="_blank" class="button">💬 Consultar</a>
+        </div>
+
+        <div class="card">
+            <img src="/imagenes/descarga (4).jpeg" alt="Vitamina C en polvo">
+            <h3>💪 Vitamina C en polvo</h3>
+            <p>Refuerzo natural para tu sistema inmunológico.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
+        </div>
+
+        <div class="card">
+            <img src="/imagenes/descarga (4).jpeg" alt="Vitamina C en polvo">
+            <h3>💪 Vitamina C en polvo</h3>
+            <p>Refuerzo natural para tu sistema inmunológico.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
+        </div>
+
+        <div class="card">
+            <img src="/imagenes/descarga (4).jpeg" alt="Vitamina C en polvo">
+            <h3>💪 Vitamina C en polvo</h3>
+            <p>Refuerzo natural para tu sistema inmunológico.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
+        </div>
+
+        <div class="card">
+            <img src="/imagenes/descarga (4).jpeg" alt="Vitamina C en polvo">
+            <h3>💪 Vitamina C en polvo</h3>
+            <p>Refuerzo natural para tu sistema inmunológico.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Vitamina%20C" target="_blank" class="button">💬 Consultar</a>
+        </div>
+
+        <div class="card">
+            <img src="/imagenes/descarga (1).jpeg" alt="Jengibre en polvo">
+            <h3>🧡 Jengibre en polvo</h3>
+            <p>Propiedades antiinflamatorias, ideal para infusiones y cocina.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20me%20interesa%20comprar%20Jengibre%20en%20polvo" target="_blank" class="button">💬 Consultar</a>
+        </div>
+        
+    </div>
+
+    <script>
+        document.getElementById("buscador").addEventListener("input", function () {
+            const valor = this.value.toLowerCase();
+            const tarjetas = document.querySelectorAll(".catalogo-grid .card");
+
+            tarjetas.forEach(card => {
+                const texto = card.textContent.toLowerCase();
+                card.style.display = texto.includes(valor) ? "block" : "none";
+            });
+        });
+    </script>
+
+<footer id="contacto">
+    <p>&copy; 2025 NATURITA - La Calera, Córdoba</p>
+    <div>
+        <a href="https://wa.me/3513284231" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
+        <a href="https://www.instagram.com/naturitadiet/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#inicio"><i class="fas fa-arrow-up fa-lg"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
