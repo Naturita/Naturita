@@ -69,6 +69,84 @@
             color: #c8f7c5;
         }
 
+        /* Mantener tu nav normal para desktop */
+        nav {
+            background: #4caf50;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Links normales para desktop */
+        .nav-links a {
+            color: white;
+            margin: 0 18px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c8f7c5;
+        }
+
+        /* Botón hamburguesa oculto por defecto */
+        .menu-toggle {
+            display: none;
+        }
+
+        /* --- Solo para móviles/tablets --- */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                background: #265728;
+                border-radius: 10px;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2em;
+                color: white;
+                cursor: pointer;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 1001;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background: #265728;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.3s ease-in-out;
+                width: 180px;
+            }
+
+            .nav-links a {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+            }
+
+            .nav-links.show {
+                max-height: 400px; /* Ajusta según cantidad de links */
+            }
+        }
+
         .container {
             text-align: center;
             margin-top: 20px;
@@ -430,10 +508,15 @@
 </header>
 
 <nav>
-    <a href="../../../index.html">Inicio</a>
-    <a href="/static/templates/catalogo.html">Catálogo</a>
-    <a href="#pedidos">Pedidos</a>
-    <a href="#contacto">Contacto</a>
+    <div class="nav-container">
+        <span class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></span>
+        <div class="nav-links" id="nav-links">
+            <a href="../../../index.html">Inicio</a>
+            <a href="/static/templates/catalogo.html">Catálogo</a>
+            <a href="#pedidos">Pedidos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
 </nav>
 
 <br>
@@ -796,6 +879,15 @@
                 modal.style.display = 'none';
             }
         });
+    });
+</script>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
     });
 </script>
 
