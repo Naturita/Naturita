@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Naturita - Tu Dietética en La Calera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #f4fdf4;
+            color: #2d4436;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #c1dfc4, #deecdd);
+            text-align: center;
+            padding: 80px 20px 60px;
+            color: #1c3a2c;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background: #4caf50;
+            border-radius: 5px;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        nav {
+            background: #4caf50;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 18px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c8f7c5;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #2e8b57;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .button:hover {
+            background: #206b42;
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2e4d32;
+        }
+
+        .producto {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            animation: fadeUp 1s ease;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .producto h3 {
+            color: #388e3c;
+            font-size: 1.5em;
+        }
+
+        .producto p {
+            margin: 10px 0;
+            font-size: 1.05em;
+        }
+
+        .producto a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #2e8b57;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .producto a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin: 12px 0;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #e0f2e9;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 50px;
+            color: #4f772d;
+            font-size: 0.95em;
+            border-top: 2px solid #cce4d4;
+        }
+
+        footer i {
+            margin: 0 10px;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        footer i:hover {
+            color: #2e8b57;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        .catalogo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center; /* <- Esto centra la última si está sola */
+        }
+
+
+
+        .card {
+            background: #446b335b;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+            flex: 1 1 280px;
+            max-width: 320px;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .logo {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: none;
+
+            /* Centramos en pantalla */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .modal-body img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .modal-body h3 {
+            margin-bottom: 10px;
+            color: #388e3c;
+        }
+
+        .modal-body p {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .card .button {
+            pointer-events: none;
+        }
+
+        .modal-body button.agregar-carrito {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .modal-body input[type="number"] {
+            width: 60px;
+            padding: 6px;
+            margin-top: 5px;
+        }
+
+
+        .carrito {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 700px;
+            height: 100%;
+            background: white;
+            box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+            transition: right 0.3s;
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .carrito.visible {
+            right: 0;
+        }
+
+        .carrito h2 {
+            margin-bottom: 20px;
+        }
+
+        .carrito table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .carrito th, .carrito td {
+            border-bottom: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .carrito input[type="number"] {
+            width: 60px;
+        }
+
+        .carrito .total {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        .carrito .cerrar {
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            float: right;
+            cursor: pointer;
+        }
+
+        .carrito .whatsapp {
+            background: #00000093;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .abrir-carrito {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1500;
+        }
+
+        .carrito .aviso-envio {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid #ffeeba;
+            border-radius: 8px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .carrito .aviso-envio i {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 600px) {
+            .carrito {
+                width: 100% !important;
+                padding: 15px;
+            }
+
+            .carrito table {
+                font-size: 0.9em;
+            }
+
+            .abrir-carrito {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+
+            .carrito .cerrar {
+                width: 26px;
+                height: 26px;
+                font-size: 1em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="../../../imagenes/logo.png" alt="Logo Naturita">
+    <h1>Catálogo Naturita</h1>
+    <p>Explorá nuestros productos por categoría 🍃</p>
+</header>
+
+<nav>
+    <a href="../../../index.html">Inicio</a>
+    <a href="/static/templates/catalogo.html">Catálogo</a>
+    <a href="#pedidos">Pedidos</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<br>
+
+<h1 style="text-align: center;">Catálogo de Fitness</h1>
+
+<div class="container" style="text-align: center;">
+    <input type="text" id="buscador" placeholder="Buscar productos..." style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
+</div>
+
+<div href="#catalogo" class="catalogo-grid">
+    <div class="card" data-precio="$2200" data-cantidad="1 barra" data-extra="Barras proteicas para energía y recuperación.">
+        <img src="../../../imagenes/fitness1.jpeg" alt="Barras proteicas ENA / Factory">
+        <h3>💪 Barras proteicas ENA / Factory</h3>
+        <p>Ideales para antes o después del entrenamiento.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Barras%20proteicas%20ENA%20/%20Factory" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$1800" data-cantidad="350g" data-extra="Pastas de maní y arándanos, alto en proteína y energía.">
+        <img src="../../../imagenes/fitness2.jpeg" alt="Pastas de maní y arándanos">
+        <h3>🥜 Pastas de maní y arándanos</h3>
+        <p>Snack nutritivo para tus entrenamientos o meriendas.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Pastas%20de%20maní%20y%20arándanos" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$1500" data-cantidad="100g / 200g / 500g" data-extra="Mix energético para entrenamiento y recuperación.">
+        <img src="../../../imagenes/fitness3.jpeg" alt="Mix energético X 100 / 200 / 500 grs">
+        <h3>⚡ Mix energético X 100 / 200 / 500 grs</h3>
+        <p>Aporta energía rápida y nutrientes esenciales.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Mix%20energético%20X%20100%20/%20200%20/%20500%20grs" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$4500" data-cantidad="1kg" data-extra="Proteínas en polvo o snacks altos en proteína.">
+        <img src="../../../imagenes/fitness4.jpeg" alt="Proteínas en polvo o snacks altos en proteína">
+        <h3>🥛 Proteínas en polvo o snacks altos en proteína</h3>
+        <p>Perfecto para aumentar masa muscular y recuperación.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Proteínas%20en%20polvo%20o%20snacks%20altos%20en%20proteína" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$5000" data-cantidad="1kg" data-extra="Whey Protein ULTRA TECH, variedad de sabores.">
+        <img src="../../../imagenes/fitness5.jpeg" alt="Whey Protein ULTRA TECH">
+        <h3>💪 Whey Protein (varios formatos ULTRA TECH)</h3>
+        <p>Ideal para crecimiento muscular y recuperación post entrenamiento.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Whey%20Protein%20ULTRA%20TECH" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$2000" data-cantidad="150g" data-extra="Protein Pudding / Pizza / Cupcake altos en proteína.">
+        <img src="../../../imagenes/fitness6.jpeg" alt="Protein Pudding / Pizza / Cupcake">
+        <h3>🍰 Protein Pudding / Pizza / Cupcake</h3>
+        <p>Snack saludable, ideal para meriendas proteicas.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Protein%20Pudding%20/%20Pizza%20/%20Cupcake" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$1800" data-cantidad="500ml" data-extra="Energy Pro Drink Naranja ULTRA TECH, hidratante y energético.">
+        <img src="../../../imagenes/fitness7.jpeg" alt="Energy Pro Drink Naranja ULTRA TECH">
+        <h3>🥤 Energy Pro Drink Naranja ULTRA TECH</h3>
+        <p>Bebida energética para entrenamientos intensos.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Energy%20Pro%20Drink%20Naranja%20ULTRA%20TECH" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$1600" data-cantidad="60 caps" data-extra="BCAA / Creatina / L-Carnitina / Glutamine ULTRA TECH.">
+        <img src="../../../imagenes/fitness8.jpeg" alt="BCAA / Creatina / L-Carnitina / Glutamine ULTRA TECH">
+        <h3>💊 BCAA / Creatina / L-Carnitina / Glutamine ULTRA TECH</h3>
+        <p>Suplementos para mejorar rendimiento y recuperación muscular.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20BCAA%20/%20Creatina%20/%20L-Carnitina%20/%20Glutamine%20ULTRA%20TECH" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$1200" data-cantidad="500g" data-extra="Harinas y derivados saludables: trigo integral, avena, almendra, garbanzo y más.">
+        <img src="../../../imagenes/fitness9.jpeg" alt="Harinas y derivados">
+        <h3>🌾 Harinas y derivados</h3>
+        <p>Perfectas para repostería y recetas fitness.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Harinas%20y%20derivados" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$900" data-cantidad="500g" data-extra="Fécula de mandioca X 500 grs, ideal para recetas sin gluten.">
+        <img src="../../../imagenes/fitness10.jpeg" alt="Fécula de mandioca X 500 grs">
+        <h3>🌾 Fécula de mandioca X 500 grs</h3>
+        <p>Usada en repostería y cocina saludable.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Fécula%20de%20mandioca%20X%20500%20grs" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$800" data-cantidad="500g" data-extra="Maizena, fécula de maíz para repostería y recetas fitness.">
+        <img src="../../../imagenes/fitness11.jpeg" alt="Maizena (fécula de maíz)">
+        <h3>🌽 Maizena (fécula de maíz)</h3>
+        <p>Perfecta para espesar y hornear recetas saludables.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Maizena%20(fécula%20de%20maíz)" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$1500" data-cantidad="500g" data-extra="Cous cous premium 500 grs, fácil de preparar y nutritivo.">
+        <img src="../../../imagenes/fitness12.jpeg" alt="Cous cous premium 500 grs">
+        <h3>🥣 Cous cous premium 500 grs</h3>
+        <p>Ideal para ensaladas, guarniciones y platos rápidos.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Cous%20cous%20premium%20500%20grs" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$1300" data-cantidad="250g" data-extra="Pan rallado / rebozador de garbanzo / arroz, saludable.">
+        <img src="../../../imagenes/fitness13.jpeg" alt="Pan rallado / rebozador de garbanzo / arroz">
+        <h3>🍞 Pan rallado / rebozador de garbanzo / arroz</h3>
+        <p>Perfecto para empanizados y recetas fitness.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Pan%20rallado%20/%20rebozador%20de%20garbanzo%20/%20arroz" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card" data-precio="$3500" data-cantidad="1 unidad" data-extra="Amino 2500, suplemento para recuperación y rendimiento.">
+        <img src="../../../imagenes/fitness14.jpeg" alt="Amino 2500">
+        <h3>💊 Amino 2500</h3>
+        <p>Favorece recuperación muscular y rendimiento físico.</p>
+        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Amino%202500" target="_blank" class="button">🔎 Ver mas...</a>
+    </div>
+
+    <div class="card"
+        data-precio="$5500 el pack"
+        data-cantidad="7 porciones"
+        data-extra="Alto contenido proteico. Sin azúcar añadida.">
+        <img src="../../imagenes/protein_pudding.jpg" alt="Protein Pudding">
+        <h3>💪 Protein Pudding x7 porciones</h3>
+        <p>Postre proteico, ideal para recuperación muscular.</p>
+    </div>
+
+    <div class="card"
+        data-precio="$5200 el pack"
+        data-cantidad="7 porciones"
+        data-extra="Apto para dietas fitness y keto.">
+        <img src="../../imagenes/protein_pizza.jpg" alt="Protein Pizza">
+        <h3>🍕 Protein Pizza x7 porciones</h3>
+        <p>Preparado proteico para pizza baja en carbohidratos.</p>
+    </div>
+
+    <div class="card"
+        data-precio="$5400 el pack"
+        data-cantidad="7 porciones"
+        data-extra="Ideal para snacks proteicos o desayunos.">
+        <img src="../../imagenes/protein_cupcake.jpg" alt="Protein Cupcake">
+        <h3>🧁 Protein Cupcake x7 porciones</h3>
+        <p>Mezcla para muffins proteicos, sin azúcar añadida.</p>
+    </div>
+
+    <div class="card"
+        data-precio="$4800 la caja"
+        data-cantidad="6 unidades"
+        data-extra="Ricas en proteínas, sin TACC.">
+        <img src="../../imagenes/barritas_integra.jpg" alt="Barritas Integra">
+        <h3>🍫 Barritas Integra</h3>
+        <p>Sabores: almendra, banana, chocolate, avena, arándanos, maní y chocolate.</p>
+    </div>
+
+    <div class="card"
+        data-precio="$4200 la caja"
+        data-cantidad="6 unidades"
+        data-extra="A base de frutas naturales.">
+        <img src="../../imagenes/barritas_trini.jpg" alt="Barritas Trini">
+        <h3>🍓 Barritas Trini</h3>
+        <p>Sabores frutilla y arándanos. Energéticas y saludables.</p>
+    </div>
+
+    <div class="card"
+        data-precio="$4500 la caja"
+        data-cantidad="6 unidades"
+        data-extra="Con alto valor energético.">
+        <img src="../../imagenes/barritas_mervick.jpg" alt="Barritas Mervick">
+        <h3>🍌 Barritas Mervick</h3>
+        <p>Sabores frambuesa, limón, chocolate y banana.</p>
+    </div>
+
+    <div class="card"
+        data-precio="$12500 el envase"
+        data-cantidad="900g"
+        data-extra="Alta pureza, rápida absorción. Varios sabores.">
+        <img src="../../imagenes/whey_ultra_tech.jpg" alt="Whey Protein Ultra Tech">
+        <h3>🏋️‍♂️ Whey Protein Ultra Tech</h3>
+        <p>Suplemento de proteína de suero. Ideal para recuperación muscular.</p>
+    </div>
+
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal-producto">
+    <div class="modal-content">
+        <span class="close-btn" id="cerrar-modal">&times;</span>
+        <div class="modal-body">
+            <img id="modal-img" src="" alt="Imagen del producto">
+            <h3 id="modal-titulo">Título</h3>
+            <p id="modal-descripcion">Descripción detallada del producto...</p>
+            <p id="modal-precio"></p>
+            <p id="modal-cantidad"></p>
+            <p id="modal-extra"></p>
+            <label>Cantidad: <input type="number" id="cantidad-agregar" min="1" value="1"></label><br>
+            <button class="agregar-carrito" onclick="agregarDesdeModal()">Agregar al carrito</button>
+            <a id="modal-link" href="#" target="_blank" class="button">💬 Consultar por WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<!-- Botón abrir carrito -->
+<div class="abrir-carrito" onclick="document.getElementById('carrito').classList.add('visible')">
+    🛒 Ver Carrito
+</div>
+
+<!-- Carrito -->
+<div id="carrito" class="carrito">
+    <button class="cerrar" onclick="document.getElementById('carrito').classList.remove('visible')">&times;</button>
+    <h2>Carrito de Compras</h2>
+    <table id="tabla-carrito">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cant.</th>
+                <th>Unidad</th>
+                <th>Total</th>
+                <th>X</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="total" id="total-general">Total: $0</div>
+    
+    <div class="aviso-envio" id="aviso-envio">
+        <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
+    </div>
+    <div id="retiro-sucursal" style="display: none; margin-top: 10px;">
+        <label>¿Retirar en sucursal Naturita?</label><br>
+        <label><input type="radio" name="retiro" value="Sí"> Sí</label>
+        <label><input type="radio" name="retiro" value="No" checked> No</label>
+    </div>
+
+    <div class="whatsapp" onclick="enviarWhatsApp()">Enviar 🛒 CARRITO 🛒 por WhatsApp</div>
+</div>
+
+<script>
+    const carrito = [];
+    let modalProducto = {};
+
+    function agregarAlCarrito(nombre, precioUnitario, unidad, cantidad) {
+        carrito.push({ nombre, precioUnitario, unidad, cantidad });
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const tbody = document.querySelector('#tabla-carrito tbody');
+        tbody.innerHTML = '';
+        let total = 0;
+
+        carrito.forEach((item, i) => {
+            const tr = document.createElement('tr');
+            const precio = (item.precioUnitario * item.cantidad).toFixed(2);
+            total += parseFloat(precio);
+
+            tr.innerHTML = `
+                <td>${item.nombre}</td>
+                <td><input type="number" min="1" value="${item.cantidad}" onchange="cambiarCantidad(${i}, this.value)"></td>
+                <td>${item.unidad}</td>
+                <td>$${precio}</td>
+                <td><button onclick="eliminarDelCarrito(${i})">❌</button></td>
+            `;
+            tbody.appendChild(tr);
+        });
+
+        document.getElementById('total-general').textContent = 'Total: $' + total.toFixed(2);
+
+        // Mostrar mensaje de envío
+        const avisoEnvio = document.getElementById('aviso-envio');
+        if (total >= 10000) {
+            avisoEnvio.textContent = '🎉 ¡Felicidades! Pasaste los $10.000, tenés envío a domicilio si sos de la zona.';
+            avisoEnvio.style.color = 'green';
+        // Mostrar opciones de retiro
+            document.getElementById('retiro-sucursal').style.display = 'block';
+        } else {
+            avisoEnvio.textContent = '📦 Te falta poco para llegar a $10.000 y tener tu envio gratis si sos de la zona!';
+            avisoEnvio.style.color = 'orange';
+            // Ocultar si no supera los $10.000
+            document.getElementById('retiro-sucursal').style.display = 'none';
+        }
+
+    }
+
+    function cambiarCantidad(i, nuevaCantidad) {
+        carrito[i].cantidad = parseFloat(nuevaCantidad);
+        actualizarCarrito();
+    }
+
+    function eliminarDelCarrito(i) {
+        carrito.splice(i, 1);
+        actualizarCarrito();
+    }
+
+    function enviarWhatsApp() {
+        let mensaje = '🛒 Pedido Naturita:%0A';
+        let total = 0;
+
+        carrito.forEach(item => {
+            const subtotal = (item.precioUnitario * item.cantidad).toFixed(2);
+            mensaje += `• ${item.nombre} - ${item.cantidad} - ${item.unidad}: $${subtotal}%0A`;
+            total += parseFloat(subtotal);
+        });
+
+        mensaje += `%0ATotal: $${total.toFixed(2)}`;
+
+        // Obtener opción de retiro si está visible
+        const retiroDiv = document.getElementById('retiro-sucursal');
+        if (retiroDiv.style.display !== 'none') {
+            const retiro = document.querySelector('input[name="retiro"]:checked');
+            if (retiro) {
+                mensaje += `%0ARetirar en sucursal: ${retiro.value}`;
+            }
+        }
+
+        mensaje += `%0AReservar pedido a nombre de:`;
+
+        const numero = '3513284231';
+        window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+
+        // Limpiar carrito luego de enviar
+        carrito.length = 0;
+        actualizarCarrito();
+        document.getElementById('carrito').classList.remove('visible');
+    }
+
+    function agregarDesdeModal() {
+        const cantidad = parseFloat(document.getElementById('cantidad-agregar').value);
+        if (!modalProducto || !modalProducto.precioUnitario || !modalProducto.unidad) return;
+        agregarAlCarrito(modalProducto.nombre, modalProducto.precioUnitario, modalProducto.unidad, cantidad);
+        document.getElementById('modal-producto').style.display = 'none';
+    }
+
+    // Buscador
+    document.getElementById("buscador").addEventListener("input", function () {
+        const valor = this.value.toLowerCase();
+        const tarjetas = document.querySelectorAll(".catalogo-grid .card");
+
+        tarjetas.forEach(card => {
+            const texto = card.textContent.toLowerCase();
+            card.style.display = texto.includes(valor) ? "block" : "none";
+        });
+    });
+
+    // Modal y lógica de click en tarjetas
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('modal-producto');
+        const cerrarModal = document.getElementById('cerrar-modal');
+
+        const modalImg = document.getElementById('modal-img');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalDescripcion = document.getElementById('modal-descripcion');
+        const modalPrecio = document.getElementById('modal-precio');
+        const modalCantidad = document.getElementById('modal-cantidad');
+        const modalExtra = document.getElementById('modal-extra');
+        const modalLink = document.getElementById('modal-link');
+
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.querySelector('img').src;
+                const titulo = card.querySelector('h3').textContent;
+                const descripcion = card.querySelector('p').textContent;
+                const link = card.querySelector('a.button').href;
+
+                const precioTexto = card.dataset.precio || '$0';
+                const cantidadTexto = card.dataset.cantidad || '';
+                const extra = card.dataset.extra || '';
+
+                const precioMatch = precioTexto.match(/\$(\d+(\.\d+)?)/);
+                const unidadMatch = cantidadTexto.match(/(\d+)?\s*([a-zA-Z]+)/);
+
+                const precioUnitario = precioMatch ? parseFloat(precioMatch[1]) : 0;
+                const unidad = unidadMatch ? unidadMatch[2] : 'u';
+
+                modalImg.src = imgSrc;
+                modalTitulo.textContent = titulo;
+                modalDescripcion.textContent = descripcion;
+                modalPrecio.textContent = precioTexto;
+                modalCantidad.textContent = cantidadTexto;
+                modalExtra.textContent = extra;
+                modalLink.href = link;
+
+                modalProducto = {
+                    nombre: titulo,
+                    precioUnitario: precioUnitario,
+                    unidad: cantidadTexto || 'u'
+                };
+
+
+                document.getElementById('cantidad-agregar').value = 1;
+                modal.style.display = 'block';
+            });
+        });
+
+        cerrarModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+
+<script>
+    document.getElementById("buscador").addEventListener("input", function () {
+        const valor = this.value.toLowerCase();
+        const tarjetas = document.querySelectorAll(".catalogo-grid .card");
+
+        tarjetas.forEach(card => {
+            const texto = card.textContent.toLowerCase();
+            card.style.display = texto.includes(valor) ? "block" : "none";
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('modal-producto');
+        const cerrarModal = document.getElementById('cerrar-modal');
+
+        const modalImg = document.getElementById('modal-img');
+        const modalTitulo = document.getElementById('modal-titulo');
+        const modalDescripcion = document.getElementById('modal-descripcion');
+        const modalPrecio = document.getElementById('modal-precio');
+        const modalCantidad = document.getElementById('modal-cantidad');
+        const modalExtra = document.getElementById('modal-extra');
+        const modalLink = document.getElementById('modal-link');
+
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.querySelector('img').src;
+                const titulo = card.querySelector('h3').textContent;
+                const descripcion = card.querySelector('p').textContent;
+                const link = card.querySelector('a.button').href;
+
+                const precio = card.dataset.precio || '';
+                const cantidad = card.dataset.cantidad || '';
+                const extra = card.dataset.extra || '';
+
+                modalImg.src = imgSrc;
+                modalTitulo.textContent = titulo;
+                modalDescripcion.textContent = descripcion;
+                modalPrecio.textContent = precio;
+                modalCantidad.textContent = cantidad;
+                modalExtra.textContent = extra;
+                modalLink.href = link;
+
+                modal.style.display = 'block';
+            });
+        });
+
+        cerrarModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+<footer id="contacto">
+    <p>&copy; 2025 NATURITA - La Calera, Córdoba</p>
+    <div>
+        <a href="https://wa.me/3513284231" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
+        <a href="https://www.instagram.com/naturitadiet/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#inicio"><i class="fas fa-arrow-up fa-lg"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
