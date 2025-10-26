@@ -450,16 +450,21 @@
         }
 
         .abrir-carrito {
+            text-align: center;
             position: fixed;
-            bottom: 20px;
+            bottom: 70px;
             right: 20px;
-            background: #4caf50;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
+            height: 120px;  /* más alto */
+            background: #2e8b5696;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.685);
+            padding: 14px 28px;
+            border-radius: 20px;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             z-index: 1500;
+            border: 5px solid #1b4d2b; /* borde más oscuro */
+            border-radius: 20px;
         }
 
         .carrito .aviso-envio {
@@ -605,7 +610,7 @@
 
 <!-- Botón abrir carrito -->
 <div class="abrir-carrito" onclick="document.getElementById('carrito').classList.add('visible')">
-    🛒 Ver Carrito
+    Ver<br>Carrito<br><i class="fa-solid fa-cart-shopping"></i>
 </div>
 
 <!-- Carrito -->
