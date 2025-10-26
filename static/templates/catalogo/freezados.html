@@ -922,6 +922,38 @@
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
     }
 </style>
+<script>
+    const scrollBtn = document.getElementById("scrollButton");
+
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+
+        // Cambia el texto y acción cuando termina de bajar
+        setTimeout(() => {
+            scrollBtn.innerHTML = "↑<br>Volver<br>arriba";
+            scrollBtn.onclick = scrollToTop;
+        }, 1200);
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        // Cambia el texto y acción al volver arriba
+        setTimeout(() => {
+            scrollBtn.innerHTML = "Ver<br>más<br>↓";
+            scrollBtn.onclick = scrollToBottom;
+        }, 1200);
+    }
+
+    // Estado inicial
+    scrollBtn.onclick = scrollToBottom;
+</script>
 
 </body>
 </html>
