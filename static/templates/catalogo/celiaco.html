@@ -989,5 +989,37 @@
     </div>
 </footer>
 
+<!-- 🔽 Botón flotante Ver más / Volver arriba -->
+<button id="scrollButton">Ver<br>más<br>↓</button>
+
+<style>
+    #scrollButton {
+        position: fixed;
+        bottom: 70px; /* 👈 ESTA línea controla la altura desde abajo */
+        left: 5px;
+        background-color: #2e8b5696;
+        color: rgba(0, 0, 0, 0.685);
+        border: 5px solid #1b4d2b; /* borde más oscuro */
+        border-radius: 20px;
+        padding: 16px 20px;
+        height: 120px;  /* más alto */
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+        z-index: 999;
+        text-align: center;
+        line-height: 1.3em; /* espacio entre líneas */
+    }
+
+    #scrollButton:hover {
+        background-color: #206b42;
+        border-color: #133820;
+        transform: scale(1.08);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+</style>
+
 </body>
 </html>
