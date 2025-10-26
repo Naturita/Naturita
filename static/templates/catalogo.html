@@ -31,26 +31,82 @@
         }
 
         .container {
-            text-align: center;
-            margin-top: 20px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            
+            display: flex;
+            justify-content: center; /* centra todo horizontalmente */
+            align-items: center;
+            
+            gap: 20px; /* espacio entre input y botón */
+            
+            height: 100px;
+            padding: 10px 20px; /* espacio desde los bordes del contenedor */
         }
 
-        #buscador {
+
+        /* Botón dropdown */
+        #buscador-lista {
             padding: 12px 20px;
-            width: 60%;
+            width: 100%;
             max-width: 400px;
             border-radius: 30px;
             border: 1px solid #ccc;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 50px rgb(0, 0, 0);
             margin-bottom: 30px;
             font-size: 1em;
             outline: none;
             transition: 0.3s;
         }
 
+        #buscador-lista:hover {
+            border-color: #58ec18;
+            box-shadow: 0 10px 50px rgb(0, 0, 0);
+        }
+
+        /* Contenido del dropdown */
+        .dropdown-content {
+            display: none; /* oculto por defecto */
+            position: absolute;
+            left: 0;
+            background-color: white;
+            min-width: 220px;
+            border-color: #58ec18;
+            box-shadow: 0 10px 50px rgb(0, 0, 0);            border-radius: 10px;
+            z-index: 1001;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+
+        #buscador {
+            padding: 12px 20px ;
+            width: 60%;
+            max-width: 400px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            box-shadow: 0 10px 50px rgb(0, 0, 0);
+            margin-bottom: 30px;
+            margin-right: 30px;
+            font-size: 1em;
+            outline: none;
+            transition: 0.3s;
+        }
+
         #buscador:focus {
-            border-color: #6ab04c;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            border-color: #58ec18;
+            box-shadow: 0 10px 50px rgb(0, 0, 0);
         }
 
         .catalogo-grid {
@@ -122,106 +178,128 @@
     <p>Explorá nuestros productos por categoría 🍃</p>
 </header>
 
-<!-- 🔍 Buscador -->
+<!-- Buscador + Dropdown por click -->
 <div class="container">
+    <div class="dropdown">
+        <button id="buscador-lista" style="color: rgb(85, 84, 84);">Lista</button>
+        <div id="dropdown-content" class="dropdown-content">
+            <a href="catalogo/granos_y_semillas.html">🌾 Granos y semillas</a>
+            <a href="catalogo/frutos_secos.html">🥜 Frutos secos</a>
+            <a href="catalogo/harina_derivados.html">🌾 Harinas y derivados</a>
+            <a href="catalogo/snack_cereales.html">🍪 Snacks y cereales</a>
+            <a href="catalogo/granel.html">🛒 Productos a granel</a>
+            <a href="catalogo/vegetariano.html">🥗 Veganos y vegetarianos</a>
+            <a href="catalogo/suplementos.html">💊 Suplementos</a>
+            <a href="catalogo/organicos.html">🌱 Orgánicos</a>
+            <a href="catalogo/diabetico.html">🍬 Diabéticos</a>
+            <a href="catalogo/celiaco.html">🌾 Celíacos</a>
+            <a href="catalogo/fitness.html">💪 Fitness</a>
+            <a href="catalogo/endulzante.html">🍯 Endulzantes y naturales</a>
+            <a href="catalogo/infusiones.html">🌿 Infusiones y hierbas</a>
+            <a href="catalogo/freezados.html">❄️ Freezados</a>
+        </div>
+    </div>
+
     <input type="text" id="buscador" placeholder="Buscar tipo de catálogo...">
 </div>
+
+
 
 <!-- 🛒 Catálogo -->
 <div class="catalogo-grid" id="catalogo">
     <a href="catalogo/granos_y_semillas.html" class="card">
-        <img src="../../imagenes/catalogo/Granos y semillas.jpeg" alt="Granos y semillas">
+        <img src="/imagenes/catalogo/Granos y semillas.jpeg" alt="Granos y semillas">
         <h3>🌾 Granos y semillas</h3>
         <p>Chía, lino, quinoa, girasol.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/frutos_secos.html" class="card">
-        <img src="../../imagenes/catalogo/Frutos secos.jpg" alt="Frutos secos">
+        <img src="/imagenes/catalogo/Frutos secos.jpg" alt="Frutos secos">
         <h3>🥜 Frutos secos</h3>
         <p>Nueces, almendras, castañas, maní.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/harina_derivados.html" class="card">
-        <img src="../../imagenes/catalogo/Harinas y derivados.jpg" alt="Harinas y derivados">
+        <img src="/imagenes/catalogo/Harinas y derivados.jpg" alt="Harinas y derivados">
         <h3>🌾 Harinas y derivados</h3>
         <p>Harina integral, avena, fécula, premezclas.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/snack_cereales.html" class="card">
-        <img src="../../imagenes/catalogo/Snacks y cereales.jpg" alt="Snacks y cereales">
+        <img src="/imagenes/catalogo/Snacks y cereales.jpg" alt="Snacks y cereales">
         <h3>🍪 Snacks y cereales</h3>
         <p>Granolas, barritas, galletas, chips saludables.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/granel.html" class="card">
-        <img src="../../imagenes/catalogo/Productos a granel.jpg" alt="Productos a granel">
+        <img src="/imagenes/catalogo/Productos a granel.jpg" alt="Productos a granel">
         <h3>🛒 Productos a granel</h3>
         <p>Legumbres, frutos secos, cereales por peso.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/vegetariano.html" class="card">
-        <img src="../../imagenes/catalogo/Veganos y vegetarianos.jpg" alt="Veganos y vegetarianos">
+        <img src="/imagenes/catalogo/Veganos y vegetarianos.jpg" alt="Veganos y vegetarianos">
         <h3>🥗 Veganos y vegetarianos</h3>
         <p>Proteínas vegetales, tofu, hamburguesas, leches vegetales.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/suplementos.html" class="card">
-        <img src="../../imagenes/catalogo/Suplementos.jpg" alt="Suplementos">
+        <img src="/imagenes/catalogo/Suplementos.jpg" alt="Suplementos">
         <h3>💊 Suplementos</h3>
         <p>Proteínas, vitaminas, minerales y colágeno.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/organicos.html" class="card">
-        <img src="../../imagenes/catalogo/Orgánicos.jpg" alt="Orgánicos">
+        <img src="/imagenes/catalogo/Orgánicos.jpg" alt="Orgánicos">
         <h3>🌱 Orgánicos</h3>
         <p>Alimentos sin pesticidas ni conservantes.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/diabetico.html" class="card">
-        <img src="../../imagenes/catalogo/Diabéticos.jpg" alt="Diabéticos">
+        <img src="/imagenes/catalogo/Diabéticos.jpg" alt="Diabéticos">
         <h3>🍬 Diabéticos</h3>
         <p>Sin azúcar, endulzantes naturales y harinas integrales.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/celiaco.html" class="card">
-        <img src="../../imagenes/catalogo/Celíacos.jpg" alt="Celíacos">
+        <img src="/imagenes/catalogo/Celíacos.jpg" alt="Celíacos">
         <h3>🌾 Celíacos</h3>
         <p>Sin TACC, panes, pastas y premezclas aptas.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/fitness.html" class="card">
-        <img src="../../imagenes/catalogo/Fitness.jpeg" alt="Fitness">
+        <img src="/imagenes/catalogo/Fitness.jpeg" alt="Fitness">
         <h3>💪 Fitness</h3>
         <p>Snacks proteicos, suplementos y batidos.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/endulzante.html" class="card">
-        <img src="../../imagenes/catalogo/Endulzantes y endulzantes naturales.jpg" alt="Endulzantes naturales">
+        <img src="/imagenes/catalogo/Endulzantes y endulzantes naturales.jpg" alt="Endulzantes naturales">
         <h3>🍯 Endulzantes y endulzantes naturales</h3>
         <p>Stevia, miel, azúcar mascabo, sirope de agave.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/infusiones.html" class="card">
-        <img src="../../imagenes/catalogo/Infusiones y hierbas.jpg" alt="Infusiones y hierbas">
+        <img src="/imagenes/catalogo/Infusiones y hierbas.jpg" alt="Infusiones y hierbas">
         <h3>🌿 Infusiones y hierbas</h3>
         <p>Manzanilla, té verde, jengibre, cúrcuma.</p>
         <button class="button">VER PRODUCTOS</button>
     </a>
 
     <a href="catalogo/freezados.html" class="card">
-        <img src="../../imagenes/catalogo/Freezados.jpg" alt="Freezados">
+        <img src="/imagenes/catalogo/Freezados.jpg" alt="Freezados">
         <h3>❄️ Freezados</h3>
         <p>Verduras, empanadas, hamburguesas y sopas listas.</p>
         <button class="button">VER PRODUCTOS</button>
@@ -246,7 +324,87 @@
     });
 </script>
 
+<!-- 🔽 Botón flotante Ver más / Volver arriba -->
+<button id="scrollButton">Ver<br>más<br>↓</button>
+
+<style>
+    #scrollButton {
+        position: fixed;
+        bottom: 70px; /* 👈 ESTA línea controla la altura desde abajo */
+        left: 5px;
+        background-color: #2e8b5696;
+        color: rgba(0, 0, 0, 0.685);
+        border: 5px solid #1b4d2b; /* borde más oscuro */
+        border-radius: 20px;
+        padding: 16px 20px;
+        height: 120px;  /* más alto */
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+        z-index: 999;
+        text-align: center;
+        line-height: 1.3em; /* espacio entre líneas */
+    }
+
+    #scrollButton:hover {
+        background-color: #206b42;
+        border-color: #133820;
+        transform: scale(1.08);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    }
+</style>
+
+<script>
+    const scrollBtn = document.getElementById("scrollButton");
+
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+
+        // Cambia el texto y acción cuando termina de bajar
+        setTimeout(() => {
+            scrollBtn.innerHTML = "↑<br>Volver<br>arriba";
+            scrollBtn.onclick = scrollToTop;
+        }, 1200);
+    }
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        // Cambia el texto y acción al volver arriba
+        setTimeout(() => {
+            scrollBtn.innerHTML = "Ver<br>más<br>↓";
+            scrollBtn.onclick = scrollToBottom;
+        }, 1200);
+    }
+
+    // Estado inicial
+    scrollBtn.onclick = scrollToBottom;
+</script>
+
+<script>
+    // Script para abrir/cerrar dropdown al click
+    const btn = document.getElementById('buscador-lista');
+    const dropdown = document.getElementById('dropdown-content');
+
+    btn.addEventListener('click', () => {
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Cerrar si hace click afuera
+    window.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.style.display = 'none';
+        }
+    });
+</script>
+
 </body>
 </html>
-
-
