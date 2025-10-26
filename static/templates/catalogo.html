@@ -10,6 +10,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../imagenes/logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../imagenes/logo.png">
     <style>
+        html, body {
+            overflow-x: hidden; /* Evita desplazamiento horizontal */
+            width: 100%;
+        }
+
         body {
             font-family: 'Quicksand', sans-serif;
             background: #f4fdf4;
@@ -78,7 +83,8 @@
             background-color: white;
             min-width: 220px;
             border-color: #58ec18;
-            box-shadow: 0 10px 50px rgb(0, 0, 0);            border-radius: 10px;
+            box-shadow: 0 10px 50px rgb(0, 0, 0);            
+            border-radius: 10px;
             z-index: 1001;
         }
 
