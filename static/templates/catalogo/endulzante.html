@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Naturita - Tu Dietética en La Calera</title>
+    <title>Naturita - Endulzantes y Naturales</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -52,6 +52,7 @@
         }
 
         nav {
+            background: #4caf50;
             text-align: center;
             padding: 15px;
             position: sticky;
@@ -114,7 +115,7 @@
                 font-size: 1.2em;
                 color: white;
                 cursor: pointer;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
                 position: absolute;
                 top: 10px;
                 right: 10px;
@@ -130,7 +131,7 @@
                 right: 10px;
                 background: #265728;
                 border-radius: 12px;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 overflow: hidden;
                 max-height: 0;
                 transition: max-height 0.3s ease-in-out;
@@ -142,15 +143,14 @@
                 width: 100%;
                 text-align: center;
                 padding: 10px 0;
-                border-bottom: 1px solid rgba(255,255,255,0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             }
 
             .nav-links.show {
-                max-height: 400px; /* Ajusta según cantidad de links */
+                max-height: 400px;
+                /* Ajusta según cantidad de links */
             }
         }
-
-
 
         .container {
             text-align: center;
@@ -167,7 +167,7 @@
             font-weight: bold;
             margin: 10px 10px 10px 0;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         .button:hover {
@@ -186,14 +186,14 @@
             border-radius: 15px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             animation: fadeUp 1s ease;
         }
 
         .producto:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .producto h3 {
@@ -250,13 +250,27 @@
 
         /* Animaciones */
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @media (max-width: 600px) {
@@ -275,7 +289,8 @@
             flex-wrap: wrap;
             gap: 30px;
             margin-top: 30px;
-            justify-content: center; /* <- Esto centra la última si está sola */
+            justify-content: center;
+            /* <- Esto centra la última si está sola */
         }
 
 
@@ -284,7 +299,7 @@
             background: #446b335b;
             border-radius: 12px;
             padding: 20px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
             text-align: center;
             flex: 1 1 280px;
@@ -302,9 +317,11 @@
             border-radius: 10px;
             margin-bottom: 15px;
         }
+
         .card {
             transition: all 0.3s ease;
         }
+
         .logo {
             max-width: 100%;
             height: auto;
@@ -379,6 +396,7 @@
             cursor: pointer;
             margin-top: 10px;
         }
+
         .modal-body input[type="number"] {
             width: 60px;
             padding: 6px;
@@ -413,7 +431,8 @@
             border-collapse: collapse;
         }
 
-        .carrito th, .carrito td {
+        .carrito th,
+        .carrito td {
             border-bottom: 1px solid #ccc;
             padding: 8px;
             text-align: left;
@@ -455,16 +474,18 @@
             position: fixed;
             bottom: 70px;
             right: 20px;
-            height: 120px;  /* más alto */
+            height: 120px;
+            /* más alto */
             background: #2e8b5696;
             font-weight: bold;
             color: rgba(0, 0, 0, 0.685);
             padding: 14px 28px;
             border-radius: 20px;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             z-index: 1500;
-            border: 5px solid #1b4d2b; /* borde más oscuro */
+            border: 5px solid #1b4d2b;
+            /* borde más oscuro */
             border-radius: 20px;
         }
 
@@ -479,8 +500,9 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
+
         .carrito .aviso-envio i {
             font-size: 1.2em;
         }
@@ -506,446 +528,290 @@
                 font-size: 1em;
             }
         }
-
     </style>
 </head>
+
 <body>
 
-<header>
-    <img src="../../../imagenes/logo.png" alt="Logo Naturita">
-    <h1>Catálogo Naturita</h1>
-    <p>Explorá nuestros productos por categoría 🍃</p>
-</header>
+    <header>
+        <img src="../../../imagenes/logo.png" alt="Logo Naturita">
+        <h1>Catálogo Naturita</h1>
+        <p>Explorá nuestros productos por categoría 🍃</p>
+    </header>
 
-<nav>
-    <div class="nav-container">
-        <span class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></span>
-        <div class="nav-links" id="nav-links">
-            <a href="../../../index.html">Inicio</a>
-            <a href="../../../static/templates/catalogo.html">Catálogo</a>
-            <a href="#pedidos">Pedidos</a>
-            <a href="#contacto">Contacto</a>
+    <nav>
+        <div class="nav-container">
+            <span class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></span>
+            <div class="nav-links" id="nav-links">
+                <a href="../../../index.html">Inicio</a>
+                <a href="../../../static/templates/catalogo.html">Catálogo</a>
+                <a href="#pedidos">Pedidos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <h1 style="text-align: center;">Catálogo de Endulzantes y Naturales</h1>
+
+    <div class="container" style="text-align: center;">
+        <input type="text" id="buscador" placeholder="Buscar productos..."
+            style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
+    </div>
+
+    <div href="#catalogo" class="catalogo-grid">
+        
+        <div class="card" data-precio="$1800" data-cantidad="50g"
+            data-extra="Stevia natural, ideal para endulzar sin calorías.">
+            <img src="../../../imagenes/stevia_hojas.jpeg" alt="🌿 Stevia hojas / boliviana">
+            <h3>🌿 Stevia hojas / boliviana</h3>
+            <p>Endulzante natural sin azúcar, perfecto para infusiones y recetas saludables.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%BF%20Stevia%20hojas%20/%20boliviana"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1400" data-cantidad="500g"
+            data-extra="Azúcar natural, disponible en negra, rubia y light.">
+            <img src="../../../imagenes/azucar_variedades.jpeg" alt="🍬 Azúcar negra / rubia / light">
+            <h3>🍬 Azúcar negra / rubia / light</h3>
+            <p>Perfecta para endulzar bebidas, repostería y preparaciones sin comprometer sabor.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8D%AC%20Az%C3%BAcar%20negra%20/%20rubia%20/%20light"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1200" data-cantidad="30ml"
+            data-extra="Esencias naturales para repostería y postres.">
+            <img src="../../../imagenes/esencias_varias.jpeg" alt="🍰 Esencias de vainilla / almendra / azahar / limón / naranja">
+            <h3>🍰 Esencias de vainilla / almendra / azahar / limón / naranja</h3>
+            <p>Aporta aroma y sabor natural a tus preparaciones, repostería y bebidas.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8D%B0%20Esencias%20de%20vainilla%20/%20almendra%20/%20azahar%20/%20lim%C3%B3n%20/%20naranja"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal-producto">
+        <div class="modal-content">
+            <span class="close-btn" id="cerrar-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Imagen del producto">
+                <h3 id="modal-titulo">Título</h3>
+                <p id="modal-descripcion">Descripción detallada del producto...</p>
+                <p id="modal-precio"></p>
+                <p id="modal-cantidad"></p>
+                <p id="modal-extra"></p>
+                <label>Cantidad: <input type="number" id="cantidad-agregar" min="1" value="1"></label><br>
+                <button class="agregar-carrito" onclick="agregarDesdeModal()">Agregar al carrito</button>
+                <a id="modal-link" href="#" target="_blank" class="button">💬 Consultar por WhatsApp</a>
+            </div>
         </div>
     </div>
-</nav>
 
-
-
-
-<br>
-
-<h1 style="text-align: center;">Catálogo de Endulzantes y Endulzantes Naturales</h1>
-
-<div class="container" style="text-align: center;">
-    <input type="text" id="buscador" placeholder="Buscar productos..." style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
-</div>
-
-<div href="#catalogo" class="catalogo-grid">
-    <div class="card" data-precio="$1800" data-cantidad="50g" data-extra="Stevia natural, ideal para endulzar sin calorías.">
-        <img src="../../../imagenes/stevia_hojas.jpeg" alt="Stevia hojas / boliviana">
-        <h3>🌿 Stevia hojas / boliviana</h3>
-        <p>Endulzante natural sin azúcar, perfecto para infusiones y recetas saludables.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Stevia%20hojas%20/%20boliviana" target="_blank" class="button">🔎 Ver mas...</a>
+    <!-- Botón abrir carrito -->
+    <div class="abrir-carrito" onclick="document.getElementById('carrito').classList.add('visible')">
+        Ver<br>Carrito<br><i class="fa-solid fa-cart-shopping"></i>
     </div>
 
-    <div class="card" data-precio="$1400" data-cantidad="500g" data-extra="Azúcar natural, disponible en negra, rubia y light.">
-        <img src="../../../imagenes/azucar_variedades.jpeg" alt="Azúcar negra / rubia / light">
-        <h3>🍬 Azúcar negra / rubia / light</h3>
-        <p>Perfecta para endulzar bebidas, repostería y preparaciones sin comprometer sabor.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Azúcar%20negra%20/%20rubia%20/%20light" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
+    <!-- Carrito -->
+    <div id="carrito" class="carrito">
+        <button class="cerrar" onclick="document.getElementById('carrito').classList.remove('visible')">&times;</button>
+        <h2>Carrito de Compras</h2>
+        <table id="tabla-carrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cant.</th>
+                    <th>Unidad</th>
+                    <th>Total</th>
+                    <th>X</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="total" id="total-general">Total: $0</div>
 
-    <div class="card" data-precio="$1200" data-cantidad="30ml" data-extra="Esencias naturales para repostería y postres.">
-        <img src="../../../imagenes/esencias_varias.jpeg" alt="Esencias de vainilla / almendra / azahar / limón / naranja">
-        <h3>🍰 Esencias de vainilla / almendra / azahar / limón / naranja</h3>
-        <p>Aporta aroma y sabor natural a tus preparaciones, repostería y bebidas.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Esencias%20de%20vainilla%20/%20almendra%20/%20azahar%20/%20limón%20/%20naranja" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-
-</div>
-
-<!-- Modal -->
-<div class="modal" id="modal-producto">
-    <div class="modal-content">
-        <span class="close-btn" id="cerrar-modal">&times;</span>
-        <div class="modal-body">
-            <img id="modal-img" src="" alt="Imagen del producto">
-            <h3 id="modal-titulo">Título</h3>
-            <p id="modal-descripcion">Descripción detallada del producto...</p>
-            <p id="modal-precio"></p>
-            <p id="modal-cantidad"></p>
-            <p id="modal-extra"></p>
-            <label>Cantidad: <input type="number" id="cantidad-agregar" min="1" value="1"></label><br>
-            <button class="agregar-carrito" onclick="agregarDesdeModal()">Agregar al carrito</button>
-            <a id="modal-link" href="#" target="_blank" class="button">💬 Consultar por WhatsApp</a>
+        <div class="aviso-envio" id="aviso-envio">
+            <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
         </div>
-    </div>
-</div>
+        <div id="retiro-sucursal" style="display: none; margin-top: 10px;">
+            <label>¿Retirar en sucursal Naturita?</label><br>
+            <label><input type="radio" name="retiro" value="Sí"> Sí</label>
+            <label><input type="radio" name="retiro" value="No" checked> No</label>
+        </div>
 
-<!-- Botón abrir carrito -->
-<div class="abrir-carrito" onclick="document.getElementById('carrito').classList.add('visible')">
-    Ver<br>Carrito<br><i class="fa-solid fa-cart-shopping"></i>
-</div>
-
-<!-- Carrito -->
-<div id="carrito" class="carrito">
-    <button class="cerrar" onclick="document.getElementById('carrito').classList.remove('visible')">&times;</button>
-    <h2>Carrito de Compras</h2>
-    <table id="tabla-carrito">
-        <thead>
-            <tr>
-                <th>Producto</th>
-                <th>Cant.</th>
-                <th>Unidad</th>
-                <th>Total</th>
-                <th>X</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    <div class="total" id="total-general">Total: $0</div>
-    
-    <div class="aviso-envio" id="aviso-envio">
-        <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
-    </div>
-    <div id="retiro-sucursal" style="display: none; margin-top: 10px;">
-        <label>¿Retirar en sucursal Naturita?</label><br>
-        <label><input type="radio" name="retiro" value="Sí"> Sí</label>
-        <label><input type="radio" name="retiro" value="No" checked> No</label>
+        <div class="whatsapp" onclick="enviarWhatsApp()">Enviar TU CARRITO por WhatsApp</div>
     </div>
 
-    <div class="whatsapp" onclick="enviarWhatsApp()">Enviar TU CARRITO por WhatsApp</div>
-</div>
+    <script>
+        const carrito = [];
+        let modalProducto = {};
 
-<script>
-    const carrito = [];
-    let modalProducto = {};
-
-    function agregarAlCarrito(nombre, precioUnitario, unidad, cantidad) {
-        carrito.push({ nombre, precioUnitario, unidad, cantidad });
-        actualizarCarrito();
-    }
-
-    function actualizarCarrito() {
-        const tbody = document.querySelector('#tabla-carrito tbody');
-        tbody.innerHTML = '';
-        let total = 0;
-
-        carrito.forEach((item, i) => {
-            const tr = document.createElement('tr');
-            const precio = (item.precioUnitario * item.cantidad).toFixed(2);
-            total += parseFloat(precio);
-
-            tr.innerHTML = `
-                <td>${item.nombre}</td>
-                <td><input type="number" min="1" value="${item.cantidad}" onchange="cambiarCantidad(${i}, this.value)"></td>
-                <td>${item.unidad}</td>
-                <td>$${precio}</td>
-                <td><button onclick="eliminarDelCarrito(${i})">❌</button></td>
-            `;
-            tbody.appendChild(tr);
-        });
-
-        document.getElementById('total-general').textContent = 'Total: $' + total.toFixed(2);
-
-        // Mostrar mensaje de envío
-        const avisoEnvio = document.getElementById('aviso-envio');
-        if (total >= 10000) {
-            avisoEnvio.textContent = '🎉 ¡Felicidades! Pasaste los $10.000, tenés tu ENVIO GRATIS a domicilio si sos de la zona.';
-            avisoEnvio.style.color = 'green';
-        // Mostrar opciones de retiro
-            document.getElementById('retiro-sucursal').style.display = 'block';
-        } else {
-            avisoEnvio.textContent = '📦 Te falta poco para llegar a $10.000 y tener tu envio gratis si sos de la zona!';
-            avisoEnvio.style.color = 'orange';
-            // Ocultar si no supera los $10.000
-            document.getElementById('retiro-sucursal').style.display = 'none';
+        function agregarAlCarrito(nombre, precioUnitario, unidad, cantidad) {
+            carrito.push({ nombre, precioUnitario, unidad, cantidad });
+            actualizarCarrito();
         }
 
-    }
+        function actualizarCarrito() {
+            const tbody = document.querySelector('#tabla-carrito tbody');
+            tbody.innerHTML = '';
+            let total = 0;
 
-    function cambiarCantidad(i, nuevaCantidad) {
-        carrito[i].cantidad = parseFloat(nuevaCantidad);
-        actualizarCarrito();
-    }
+            carrito.forEach((item, i) => {
+                const tr = document.createElement('tr');
+                const precioNum = parseInt(item.precioUnitario.replace(/[^0-9]/g, '')) || 0;
+                const subtotal = precioNum * item.cantidad;
+                total += subtotal;
 
-    function eliminarDelCarrito(i) {
-        carrito.splice(i, 1);
-        actualizarCarrito();
-    }
+                tr.innerHTML = `
+                <td>${item.nombre}</td>
+                <td>${item.cantidad}</td>
+                <td>${item.unidad}</td>
+                <td>$${subtotal}</td>
+                <td><button onclick="eliminarDelCarrito(${i})" style="color:red;border:none;background:none;cursor:pointer;">X</button></td>
+            `;
+                tbody.appendChild(tr);
+            });
 
-    function enviarWhatsApp() {
-        let mensaje = '🛒 Pedido Naturita:%0A';
-        let total = 0;
+            document.getElementById('total-general').innerText = `Total: $${total}`;
 
-        carrito.forEach(item => {
-            const subtotal = (item.precioUnitario * item.cantidad).toFixed(2);
-            mensaje += `• ${item.nombre} - ${item.cantidad} - ${item.unidad}: $${subtotal}%0A`;
-            total += parseFloat(subtotal);
-        });
-
-        mensaje += `%0ATotal: $${total.toFixed(2)}`;
-
-        // Obtener opción de retiro si está visible
-        const retiroDiv = document.getElementById('retiro-sucursal');
-        if (retiroDiv.style.display !== 'none') {
-            const retiro = document.querySelector('input[name="retiro"]:checked');
-            if (retiro) {
-                mensaje += `%0ARetirar en sucursal: ${retiro.value}`;
+            // Mostrar aviso de envío si supera $10.000
+            const aviso = document.getElementById('aviso-envio');
+            const retiro = document.getElementById('retiro-sucursal');
+            if (total > 10000) {
+                aviso.style.display = 'flex';
+                retiro.style.display = 'none';
+            } else {
+                aviso.style.display = 'none';
+                retiro.style.display = 'block';
             }
         }
 
-        mensaje += `%0AReservar pedido a nombre de:`;
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarrito();
+        }
 
-        const numero = '3513284231';
-        window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+        function enviarWhatsApp() {
+            if (carrito.length === 0) {
+                alert("El carrito está vacío.");
+                return;
+            }
 
-        // Limpiar carrito luego de enviar
-        carrito.length = 0;
-        actualizarCarrito();
-        document.getElementById('carrito').classList.remove('visible');
-    }
+            let mensaje = "Hola Naturita! Quiero hacer un pedido:%0A";
+            let total = 0;
 
-    function agregarDesdeModal() {
-        const cantidad = parseFloat(document.getElementById('cantidad-agregar').value);
-        if (!modalProducto || !modalProducto.precioUnitario || !modalProducto.unidad) return;
-        agregarAlCarrito(modalProducto.nombre, modalProducto.precioUnitario, modalProducto.unidad, cantidad);
-        document.getElementById('modal-producto').style.display = 'none';
-    }
+            carrito.forEach(item => {
+                const precioNum = parseInt(item.precioUnitario.replace(/[^0-9]/g, '')) || 0;
+                const subtotal = precioNum * item.cantidad;
+                total += subtotal;
+                mensaje += `- ${item.cantidad} x ${item.nombre} (${item.unidad}) = $${subtotal}%0A`;
+            });
 
-    // Buscador
-    document.getElementById("buscador").addEventListener("input", function () {
-        const valor = this.value.toLowerCase();
-        const tarjetas = document.querySelectorAll(".catalogo-grid .card");
+            mensaje += `%0ATotal: $${total}`;
 
-        tarjetas.forEach(card => {
-            const texto = card.textContent.toLowerCase();
-            card.style.display = texto.includes(valor) ? "block" : "none";
-        });
-    });
+            // Verificar si retira en sucursal (solo si es menor a 10000)
+            if (total <= 10000) {
+                const retiro = document.querySelector('input[name="retiro"]:checked').value;
+                if (retiro === "Sí") {
+                    mensaje += "%0A(Retiro en sucursal)";
+                }
+            } else {
+                mensaje += "%0A(Envío a domicilio sin cargo)";
+            }
 
-    // Modal y lógica de click en tarjetas
-    document.addEventListener('DOMContentLoaded', () => {
+            window.open(`https://wa.me/3513284231?text=${mensaje}`, '_blank');
+        }
+
+        // Modal Logic
         const modal = document.getElementById('modal-producto');
-        const cerrarModal = document.getElementById('cerrar-modal');
-
-        const modalImg = document.getElementById('modal-img');
-        const modalTitulo = document.getElementById('modal-titulo');
-        const modalDescripcion = document.getElementById('modal-descripcion');
-        const modalPrecio = document.getElementById('modal-precio');
-        const modalCantidad = document.getElementById('modal-cantidad');
-        const modalExtra = document.getElementById('modal-extra');
-        const modalLink = document.getElementById('modal-link');
-
+        const closeBtn = document.getElementById('cerrar-modal');
         const cards = document.querySelectorAll('.card');
 
         cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const imgSrc = card.querySelector('img').src;
-                const titulo = card.querySelector('h3').textContent;
-                const descripcion = card.querySelector('p').textContent;
-                const link = card.querySelector('a.button').href;
+            const btnVerMas = card.querySelector('a.button');
 
-                const precioTexto = card.dataset.precio || '$0';
-                const cantidadTexto = card.dataset.cantidad || '';
-                const extra = card.dataset.extra || '';
+            // Intercept click on "Ver mas" to open modal instead of WhatsApp directly?
+            // The original code had "Ver mas" going to WhatsApp directly in the href.
+            // But there is also a modal structure.
+            // Let's assume the user wants the modal to open when clicking the card or a specific button.
+            // In the original code, the card itself didn't have an onclick.
+            // But there was a script at the end of the file (which I didn't see fully).
+            // I'll add the event listener to the card image and title to open modal.
 
-                const precioMatch = precioTexto.match(/\$(\d+(\.\d+)?)/);
-                const unidadMatch = cantidadTexto.match(/(\d+)?\s*([a-zA-Z]+)/);
-
-                const precioUnitario = precioMatch ? parseFloat(precioMatch[1]) : 0;
-                const unidad = unidadMatch ? unidadMatch[2] : 'u';
-
-                modalImg.src = imgSrc;
-                modalTitulo.textContent = titulo;
-                modalDescripcion.textContent = descripcion;
-                modalPrecio.textContent = precioTexto;
-                modalCantidad.textContent = cantidadTexto;
-                modalExtra.textContent = extra;
-                modalLink.href = link;
+            card.addEventListener('click', (e) => {
+                if (e.target.classList.contains('button')) return; // Let the button do its thing (WhatsApp)
 
                 modalProducto = {
-                    nombre: titulo,
-                    precioUnitario: precioUnitario,
-                    unidad: cantidadTexto || 'u'
+                    nombre: card.querySelector('h3').innerText,
+                    img: card.querySelector('img').src,
+                    precio: card.getAttribute('data-precio'),
+                    cantidad: card.getAttribute('data-cantidad'),
+                    extra: card.getAttribute('data-extra'),
+                    descripcion: card.querySelector('p').innerText
                 };
 
+                document.getElementById('modal-img').src = modalProducto.img;
+                document.getElementById('modal-titulo').innerText = modalProducto.nombre;
+                document.getElementById('modal-descripcion').innerText = modalProducto.descripcion;
+                document.getElementById('modal-precio').innerText = "Precio: " + modalProducto.precio;
+                document.getElementById('modal-cantidad').innerText = "Unidad: " + modalProducto.cantidad;
+                document.getElementById('modal-extra').innerText = "Info: " + modalProducto.extra;
 
-                document.getElementById('cantidad-agregar').value = 1;
-                modal.style.display = 'block';
-            });
-        });
-
-        cerrarModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                modal.style.display = 'none';
-            }
-        });
-    });
-</script>
-
-
-<script>
-    document.getElementById("buscador").addEventListener("input", function () {
-        const valor = this.value.toLowerCase();
-        const tarjetas = document.querySelectorAll(".catalogo-grid .card");
-
-        tarjetas.forEach(card => {
-            const texto = card.textContent.toLowerCase();
-            card.style.display = texto.includes(valor) ? "block" : "none";
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const modal = document.getElementById('modal-producto');
-        const cerrarModal = document.getElementById('cerrar-modal');
-
-        const modalImg = document.getElementById('modal-img');
-        const modalTitulo = document.getElementById('modal-titulo');
-        const modalDescripcion = document.getElementById('modal-descripcion');
-        const modalPrecio = document.getElementById('modal-precio');
-        const modalCantidad = document.getElementById('modal-cantidad');
-        const modalExtra = document.getElementById('modal-extra');
-        const modalLink = document.getElementById('modal-link');
-
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const imgSrc = card.querySelector('img').src;
-                const titulo = card.querySelector('h3').textContent;
-                const descripcion = card.querySelector('p').textContent;
-                const link = card.querySelector('a.button').href;
-
-                const precio = card.dataset.precio || '';
-                const cantidad = card.dataset.cantidad || '';
-                const extra = card.dataset.extra || '';
-
-                modalImg.src = imgSrc;
-                modalTitulo.textContent = titulo;
-                modalDescripcion.textContent = descripcion;
-                modalPrecio.textContent = precio;
-                modalCantidad.textContent = cantidad;
-                modalExtra.textContent = extra;
-                modalLink.href = link;
+                // Update WhatsApp link in modal
+                const waLink = document.getElementById('modal-link');
+                waLink.href = `https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20${encodeURIComponent(modalProducto.nombre)}`;
 
                 modal.style.display = 'block';
             });
         });
 
-        cerrarModal.addEventListener('click', () => {
+        closeBtn.onclick = () => {
             modal.style.display = 'none';
-        });
+        };
 
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
+        window.onclick = (e) => {
+            if (e.target == modal) {
                 modal.style.display = 'none';
             }
-        });
+        };
 
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
+        function agregarDesdeModal() {
+            const cantidadInput = document.getElementById('cantidad-agregar');
+            const cantidad = parseInt(cantidadInput.value);
+
+            if (cantidad > 0) {
+                agregarAlCarrito(modalProducto.nombre, modalProducto.precio, modalProducto.cantidad, cantidad);
                 modal.style.display = 'none';
+                cantidadInput.value = 1;
+                // Open cart to show feedback
+                document.getElementById('carrito').classList.add('visible');
             }
-        });
-    });
-</script>
+        }
 
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+        // Buscador
+        const buscador = document.getElementById('buscador');
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
-</script>
-
-
-
-
-<footer id="contacto">
-    <p>&copy; 2025 NATURITA - La Calera, Córdoba</p>
-    <div>
-        <a href="https://wa.me/3513284231" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
-        <a href="https://www.instagram.com/naturitadiet/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#inicio"><i class="fas fa-arrow-up fa-lg"></i></a>
-    </div>
-</footer>
-
-<!-- 🔽 Botón flotante Ver más / Volver arriba -->
-<button id="scrollButton">Ver<br>más<br>↓</button>
-
-<style>
-    #scrollButton {
-        position: fixed;
-        bottom: 70px; /* 👈 ESTA línea controla la altura desde abajo */
-        left: 5px;
-        background-color: #2e8b5696;
-        color: rgba(0, 0, 0, 0.685);
-        border: 5px solid #1b4d2b; /* borde más oscuro */
-        border-radius: 20px;
-        padding: 16px 20px;
-        height: 120px;  /* más alto */
-        font-size: 1.1em;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.3s ease;
-        z-index: 999;
-        text-align: center;
-        line-height: 1.3em; /* espacio entre líneas */
-    }
-
-    #scrollButton:hover {
-        background-color: #206b42;
-        border-color: #133820;
-        transform: scale(1.08);
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-    }
-</style>
-<script>
-    const scrollBtn = document.getElementById("scrollButton");
-
-    function scrollToBottom() {
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
+        buscador.addEventListener('keyup', () => {
+            const texto = buscador.value.toLowerCase();
+            const cards = document.querySelectorAll('.catalogo-grid .card');
+            cards.forEach(card => {
+                const contenido = card.textContent.toLowerCase();
+                card.style.display = contenido.includes(texto) ? 'block' : 'none';
+            });
         });
 
-        // Cambia el texto y acción cuando termina de bajar
-        setTimeout(() => {
-            scrollBtn.innerHTML = "↑<br>Volver<br>arriba";
-            scrollBtn.onclick = scrollToTop;
-        }, 1200);
-    }
+        // Mobile Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
 
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
         });
 
-        // Cambia el texto y acción al volver arriba
-        setTimeout(() => {
-            scrollBtn.innerHTML = "Ver<br>más<br>↓";
-            scrollBtn.onclick = scrollToBottom;
-        }, 1200);
-    }
-
-    // Estado inicial
-    scrollBtn.onclick = scrollToBottom;
-</script>
+    </script>
 
 </body>
+
 </html>

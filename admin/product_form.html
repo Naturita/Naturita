@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ action }} Producto - Naturita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #f4fdf4;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .form-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            color: #2e8b57;
+            margin-top: 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2d4436;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #2e8b57;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #206b42;
+        }
+
+        .cancel-btn {
+            background: #95a5a6;
+            margin-top: 10px;
+        }
+
+        .cancel-btn:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-card">
+        <h2>{{ action }} Producto</h2>
+        <form method="post">
+            <label>Categoría</label>
+            <select name="category" required>
+                <option value="granos_y_semillas" {% if product and product.category=='granos_y_semillas' %}selected{%
+                    endif %}>Granos y Semillas</option>
+                <option value="frutos_secos" {% if product and product.category=='frutos_secos' %}selected{% endif %}>
+                    Frutos Secos</option>
+                <option value="harina_derivados" {% if product and product.category=='harina_derivados' %}selected{%
+                    endif %}>Harinas y Derivados</option>
+                <option value="snack_cereales" {% if product and product.category=='snack_cereales' %}selected{% endif
+                    %}>Snacks y Cereales</option>
+                <option value="granel" {% if product and product.category=='granel' %}selected{% endif %}>A Granel
+                </option>
+                <option value="vegetariano" {% if product and product.category=='vegetariano' %}selected{% endif %}>
+                    Veganos y Vegetarianos</option>
+                <option value="suplementos" {% if product and product.category=='suplementos' %}selected{% endif %}>
+                    Suplementos</option>
+                <option value="organicos" {% if product and product.category=='organicos' %}selected{% endif %}>
+                    Orgánicos</option>
+                <option value="diabetico" {% if product and product.category=='diabetico' %}selected{% endif %}>
+                    Diabéticos</option>
+                <option value="celiaco" {% if product and product.category=='celiaco' %}selected{% endif %}>Celíacos
+                </option>
+                <option value="fitness" {% if product and product.category=='fitness' %}selected{% endif %}>Fitness
+                </option>
+                <option value="endulzante" {% if product and product.category=='endulzante' %}selected{% endif %}>
+                    Endulzantes</option>
+                <option value="infusiones" {% if product and product.category=='infusiones' %}selected{% endif %}>
+                    Infusiones y Hierbas</option>
+                <option value="freezados" {% if product and product.category=='freezados' %}selected{% endif %}>
+                    Freezados</option>
+            </select>
+
+            <label>Nombre del Producto</label>
+            <input type="text" name="name" value="{{ product.name if product else '' }}" required>
+
+            <label>Descripción (para el pop-up)</label>
+            <textarea name="description" rows="3">{{ product.description if product else '' }}</textarea>
+
+            <label>Precio (ej: $1800)</label>
+            <input type="text" name="price" value="{{ product.price if product else '' }}" required>
+
+            <label>Unidad / Cantidad (ej: 10 unidades, 250g)</label>
+            <input type="text" name="quantity_unit" value="{{ product.quantity_unit if product else '' }}" required>
+
+            <label>Info Extra (ej: Rico en omega 3)</label>
+            <input type="text" name="extra_info" value="{{ product.extra_info if product else '' }}">
+
+            <label>URL de Imagen (ej: ../../../imagenes/descarga1.jpeg)</label>
+            <input type="text" name="image_url" value="{{ product.image_url if product else '' }}" required>
+
+            <button type="submit">Guardar Producto</button>
+            <a href="{{ url_for('admin_dashboard') }}"><button type="button" class="cancel-btn">Cancelar</button></a>
+        </form>
+    </div>
+
+</body>
+
+</html>

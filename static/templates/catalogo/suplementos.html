@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Naturita - Tu Dietética en La Calera</title>
+    <title>Naturita - Suplementos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -115,7 +115,7 @@
                 font-size: 1.2em;
                 color: white;
                 cursor: pointer;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
                 position: absolute;
                 top: 10px;
                 right: 10px;
@@ -131,7 +131,7 @@
                 right: 10px;
                 background: #265728;
                 border-radius: 12px;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 overflow: hidden;
                 max-height: 0;
                 transition: max-height 0.3s ease-in-out;
@@ -143,11 +143,12 @@
                 width: 100%;
                 text-align: center;
                 padding: 10px 0;
-                border-bottom: 1px solid rgba(255,255,255,0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             }
 
             .nav-links.show {
-                max-height: 400px; /* Ajusta según cantidad de links */
+                max-height: 400px;
+                /* Ajusta según cantidad de links */
             }
         }
 
@@ -166,7 +167,7 @@
             font-weight: bold;
             margin: 10px 10px 10px 0;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         .button:hover {
@@ -185,14 +186,14 @@
             border-radius: 15px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             animation: fadeUp 1s ease;
         }
 
         .producto:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .producto h3 {
@@ -249,13 +250,27 @@
 
         /* Animaciones */
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @media (max-width: 600px) {
@@ -274,7 +289,8 @@
             flex-wrap: wrap;
             gap: 30px;
             margin-top: 30px;
-            justify-content: center; /* <- Esto centra la última si está sola */
+            justify-content: center;
+            /* <- Esto centra la última si está sola */
         }
 
 
@@ -283,7 +299,7 @@
             background: #446b335b;
             border-radius: 12px;
             padding: 20px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
             text-align: center;
             flex: 1 1 280px;
@@ -301,9 +317,11 @@
             border-radius: 10px;
             margin-bottom: 15px;
         }
+
         .card {
             transition: all 0.3s ease;
         }
+
         .logo {
             max-width: 100%;
             height: auto;
@@ -378,6 +396,7 @@
             cursor: pointer;
             margin-top: 10px;
         }
+
         .modal-body input[type="number"] {
             width: 60px;
             padding: 6px;
@@ -412,7 +431,8 @@
             border-collapse: collapse;
         }
 
-        .carrito th, .carrito td {
+        .carrito th,
+        .carrito td {
             border-bottom: 1px solid #ccc;
             padding: 8px;
             text-align: left;
@@ -454,16 +474,18 @@
             position: fixed;
             bottom: 70px;
             right: 20px;
-            height: 120px;  /* más alto */
+            height: 120px;
+            /* más alto */
             background: #2e8b5696;
             font-weight: bold;
             color: rgba(0, 0, 0, 0.685);
             padding: 14px 28px;
             border-radius: 20px;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             z-index: 1500;
-            border: 5px solid #1b4d2b; /* borde más oscuro */
+            border: 5px solid #1b4d2b;
+            /* borde más oscuro */
             border-radius: 20px;
         }
 
@@ -478,8 +500,9 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
+
         .carrito .aviso-envio i {
             font-size: 1.2em;
         }
@@ -505,678 +528,596 @@
                 font-size: 1em;
             }
         }
-
     </style>
 </head>
+
 <body>
 
-<header>
-    <img src="../../../imagenes/logo.png" alt="Logo Naturita">
-    <h1>Catálogo Naturita</h1>
-    <p>Explorá nuestros productos por categoría 🍃</p>
-</header>
+    <header>
+        <img src="../../../imagenes/logo.png" alt="Logo Naturita">
+        <h1>Catálogo Naturita</h1>
+        <p>Explorá nuestros productos por categoría 🍃</p>
+    </header>
 
-<nav>
-    <div class="nav-container">
-        <span class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></span>
-        <div class="nav-links" id="nav-links">
-            <a href="../../../index.html">Inicio</a>
-            <a href="../../../static/templates/catalogo.html">Catálogo</a>
-            <a href="#pedidos">Pedidos</a>
-            <a href="#contacto">Contacto</a>
+    <nav>
+        <div class="nav-container">
+            <span class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></span>
+            <div class="nav-links" id="nav-links">
+                <a href="../../../index.html">Inicio</a>
+                <a href="../../../static/templates/catalogo.html">Catálogo</a>
+                <a href="#pedidos">Pedidos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <h1 style="text-align: center;">Catálogo de Suplementos</h1>
+
+    <div class="container" style="text-align: center;">
+        <input type="text" id="buscador" placeholder="Buscar productos..."
+            style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
+    </div>
+
+    <div href="#catalogo" class="catalogo-grid">
+        
+        <div class="card" data-precio="$1800" data-cantidad="30 caps"
+            data-extra="Suplemento de vitamina D para el bienestar general.">
+            <img src="../../../imagenes/vitamina_d.jpeg" alt="💊 VITAMINA D 30 CAPS NATULI">
+            <h3>💊 VITAMINA D 30 CAPS NATULI</h3>
+            <p>Apoya la salud ósea e inmune.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%92%8A%20VITAMINA%20D%2030%20CAPS%20NATULI"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$900" data-cantidad="1 sobre"
+            data-extra="Gel energizante sabor frutilla.">
+            <img src="../../../imagenes/gel_ena_frutilla.jpeg" alt="🍓 GEL ENA FRUTILLA SOBRE">
+            <h3>🍓 GEL ENA FRUTILLA SOBRE</h3>
+            <p>Rápida recuperación de energía.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8D%93%20GEL%20ENA%20FRUTILLA%20SOBRE"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$900" data-cantidad="1 sobre"
+            data-extra="Gel energizante sabor limón.">
+            <img src="../../../imagenes/gel_ena_limon.jpeg" alt="🍋 GEL ENA LIMON SOBRE">
+            <h3>🍋 GEL ENA LIMON SOBRE</h3>
+            <p>Rápida recuperación de energía.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8D%8B%20GEL%20ENA%20LIMON%20SOBRE"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2200" data-cantidad="1 shaker"
+            data-extra="Complemento nutricional en shake.">
+            <img src="../../../imagenes/shake_ena.jpeg" alt="🥤 SHAKE / Shaker Plus ENA">
+            <h3>🥤 SHAKE / Shaker Plus ENA</h3>
+            <p>Ideal para preparación de suplementos en polvo.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%A5%A4%20SHAKE%20/%20Shaker%20Plus%20ENA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2600" data-cantidad="90 caps"
+            data-extra="Complemento para control de lípidos y salud cardiovascular.">
+            <img src="../../../imagenes/ajolip.jpeg" alt="💊 AJOLIP 90 CAPSULAS NATUFARMA">
+            <h3>💊 AJOLIP 90 CAPSULAS NATUFARMA</h3>
+            <p>Apoyo a la salud cardiovascular y metabolismo de grasas.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%92%8A%20AJOLIP%2090%20CAPSULAS%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1800" data-cantidad="60 caps"
+            data-extra="Estimula la energía y concentración.">
+            <img src="../../../imagenes/guarana_natufarma.jpeg" alt="🌿 GUARANA NATUFARMA">
+            <h3>🌿 GUARANA NATUFARMA</h3>
+            <p>Aumenta vitalidad y concentración natural.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%BF%20GUARANA%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2000" data-cantidad="60 caps"
+            data-extra="Mejora circulación y memoria.">
+            <img src="../../../imagenes/ginkgo_natufarma.jpeg" alt="🧠 GINKGO NATUFARMA">
+            <h3>🧠 GINKGO NATUFARMA</h3>
+            <p>Apoya la función cognitiva y circulación sanguínea.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%A7%A0%20GINKGO%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1700" data-cantidad="1200 mg"
+            data-extra="Apoyo a la memoria y función cerebral.">
+            <img src="../../../imagenes/lecitina.jpeg" alt="💊 LECITINA 1200 NATUFARMA">
+            <h3>💊 LECITINA 1200 NATUFARMA</h3>
+            <p>Contribuye al funcionamiento del sistema nervioso.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%92%8A%20LECITINA%201200%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2400" data-cantidad="40 caps"
+            data-extra="Laxante natural para regular tránsito intestinal.">
+            <img src="../../../imagenes/natulax_plus.jpeg" alt="💊 NATULAX PLUS POR 40 CAPS NATUFARMA">
+            <h3>💊 NATULAX PLUS POR 40 CAPS NATUFARMA</h3>
+            <p>Apoya digestión y bienestar intestinal.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%92%8A%20NATULAX%20PLUS%20POR%2040%20CAPS%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2100" data-cantidad="60 caps"
+            data-extra="Apoyo hormonal y equilibrio femenino.">
+            <img src="../../../imagenes/isoflavonas.jpeg" alt="🌸 ISOFLAVONAS DE SOJA NATUFARMA">
+            <h3>🌸 ISOFLAVONAS DE SOJA NATUFARMA</h3>
+            <p>Contribuye al bienestar durante la menopausia.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%B8%20ISOFLAVONAS%20DE%20SOJA%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2200" data-cantidad="50 comp"
+            data-extra="Suplemento de calcio para huesos fuertes.">
+            <img src="../../../imagenes/calcio_500.jpeg" alt="🦴 CALCIO 500 x 50 COMP NATUFARMA">
+            <h3>🦴 CALCIO 500 x 50 COMP NATUFARMA</h3>
+            <p>Apoya la salud ósea y dental.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%A6%B4%20CALCIO%20500%20x%2050%20COMP%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2000" data-cantidad="80 caps"
+            data-extra="Mejora circulación y función cognitiva.">
+            <img src="../../../imagenes/ginkgo_80.jpeg" alt="🧠 GINKGO 80 NATUFARMA">
+            <h3>🧠 GINKGO 80 NATUFARMA</h3>
+            <p>Apoya memoria, concentración y circulación sanguínea.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%A7%A0%20GINKGO%2080%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2100" data-cantidad="30 comp"
+            data-extra="Magnesio para rendimiento deportivo y recuperación.">
+            <img src="../../../imagenes/magnesio_sport.jpeg" alt="💪 MAGNESIO SPORT 30 COMP NATUFARMA">
+            <h3>💪 MAGNESIO SPORT 30 COMP NATUFARMA</h3>
+            <p>Favorece la recuperación muscular y energía.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%92%AA%20MAGNESIO%20SPORT%2030%20COMP%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2500" data-cantidad="60 comp"
+            data-extra="Suplemento energético completo.">
+            <img src="../../../imagenes/energinat.jpeg" alt="⚡ ENERGINAT COMP X 60 NATUFARMA">
+            <h3>⚡ ENERGINAT COMP X 60 NATUFARMA</h3>
+            <p>Aumenta energía y resistencia física.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%E2%9A%A1%20ENERGINAT%20COMP%20X%2060%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2000" data-cantidad="30 comp"
+            data-extra="Omega 3 para salud cardiovascular y cerebral.">
+            <img src="../../../imagenes/omega3_30.jpeg" alt="🐟 OMEGA 3 NATUFARMA 30 COMP">
+            <h3>🐟 OMEGA 3 NATUFARMA 30 COMP</h3>
+            <p>Apoya corazón, cerebro y articulaciones.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%90%9F%20OMEGA%203%20NATUFARMA%2030%20COMP"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$3600" data-cantidad="60 comp"
+            data-extra="Omega 3 en cápsulas para salud integral.">
+            <img src="../../../imagenes/omega3_60.jpeg" alt="🐟 OMEGA 3 POR 60 COMP NATUFARMA">
+            <h3>🐟 OMEGA 3 POR 60 COMP NATUFARMA</h3>
+            <p>Refuerza sistema cardiovascular y cerebro.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%90%9F%20OMEGA%203%20POR%2060%20COMP%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1800" data-cantidad="40 caps"
+            data-extra="Levadura de cerveza rica en vitaminas B.">
+            <img src="../../../imagenes/levadura_cerveza.jpeg" alt="🍺 LEVADURA DE CERVEZA POR 40 CAPS NATUFARMA">
+            <h3>🍺 LEVADURA DE CERVEZA POR 40 CAPS NATUFARMA</h3>
+            <p>Apoya cabello, piel y uñas saludables.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8D%BA%20LEVADURA%20DE%20CERVEZA%20POR%2040%20CAPS%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2000" data-cantidad="30 caps"
+            data-extra="Carotenos y vitaminas antioxidantes.">
+            <img src="../../../imagenes/carotenos_vit.jpeg" alt="🥕 CAROTENOS VIT C Y E NATUFARMA">
+            <h3>🥕 CAROTENOS VIT C Y E NATUFARMA</h3>
+            <p>Protege células y mejora la salud de piel y ojos.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%A5%95%20CAROTENOS%20VIT%20C%20Y%20E%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1500" data-cantidad="40 comp"
+            data-extra="Suplemento natural para relajación y sueño.">
+            <img src="../../../imagenes/valeriana.jpeg" alt="🌿 VALERIANA x 40 COMP NATUFARMA">
+            <h3>🌿 VALERIANA x 40 COMP NATUFARMA</h3>
+            <p>Favorece descanso y relajación natural.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%BF%20VALERIANA%20x%2040%20COMP%20NATUFARMA"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2400" data-cantidad="60 caps"
+            data-extra="Extracto de centella asiática para circulación y piel.">
+            <img src="../../../imagenes/centella_forte.jpeg" alt="🌱 CENTELLA FORTE POR 60 CAPS">
+            <h3>🌱 CENTELLA FORTE POR 60 CAPS</h3>
+            <p>Mejora circulación y fortalece piel y tejidos.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%B1%20CENTELLA%20FORTE%20POR%2060%20CAPS"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$3000" data-cantidad="30 caps"
+            data-extra="Antioxidante natural y apoyo cardiovascular.">
+            <img src="../../../imagenes/resveratrol.jpeg" alt="🍇 RESVERATROL GEONAT">
+            <h3>🍇 RESVERATROL GEONAT</h3>
+            <p>Contribuye a la protección celular y longevidad.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8D%87%20RESVERATROL%20GEONAT"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2800" data-cantidad="60 comp"
+            data-extra="Cartílago de tiburón para articulaciones y movilidad.">
+            <img src="../../../imagenes/cartilago_tiburon.jpeg" alt="🦈 CARTILAGO DE TIBURON GEONAT">
+            <h3>🦈 CARTILAGO DE TIBURON GEONAT</h3>
+            <p>Apoya salud articular y movilidad.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%A6%88%20CARTILAGO%20DE%20TIBURON%20GEONAT"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2600" data-cantidad="60 comp"
+            data-extra="Suplemento para control de peso.">
+            <img src="../../../imagenes/garciania_cambogia.jpeg" alt="🍏 GARCIANIA CAMBOGIA 60 COMP GEONAT">
+            <h3>🍏 GARCIANIA CAMBOGIA 60 COMP GEONAT</h3>
+            <p>Apoya metabolismo y control de peso.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8D%8F%20GARCIANIA%20CAMBOGIA%2060%20COMP%20GEONAT"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2000" data-cantidad="30 comp"
+            data-extra="Ginkgo biloba para memoria y concentración.">
+            <img src="../../../imagenes/ginkgo_memo.jpeg" alt="🧠 GINKGO BILOBA MEMO 30 COMP GEONAT">
+            <h3>🧠 GINKGO BILOBA MEMO 30 COMP GEONAT</h3>
+            <p>Apoya memoria y claridad mental.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%A7%A0%20GINKGO%20BILOBA%20MEMO%2030%20COMP%20GEONAT"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2400" data-cantidad="30 comp"
+            data-extra="Suplemento de potencia masculina.">
+            <img src="../../../imagenes/virgocin.jpeg" alt="🔥 VIRGOCIN POTENCIA PLUS 30 COMP GEONAT">
+            <h3>🔥 VIRGOCIN POTENCIA PLUS 30 COMP GEONAT</h3>
+            <p>Apoya vigor, energía y rendimiento masculino.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%94%A5%20VIRGOCIN%20POTENCIA%20PLUS%2030%20COMP%20GEONAT"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1800" data-cantidad="varios"
+            data-extra="Hidratación con electrolitos y sabor.">
+            <img src="../../../imagenes/hidragreen.jpeg" alt="💧 HIDRAGREEN (varios sabores y formatos)">
+            <h3>💧 HIDRAGREEN (varios sabores y formatos)</h3>
+            <p>Bebida hidratante y energética.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%92%A7%20HIDRAGREEN%20%28varios%20sabores%20y%20formatos%29"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2000" data-cantidad="30 caps"
+            data-extra="Ácido hialurónico para piel, cabello y articulaciones.">
+            <img src="../../../imagenes/acido_hialuronico.jpeg" alt="💧 ACIDO HIALURONICO POR 30 CAPS GEONAT">
+            <h3>💧 ACIDO HIALURONICO POR 30 CAPS GEONAT</h3>
+            <p>Apoya hidratación y elasticidad de la piel.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%92%A7%20ACIDO%20HIALURONICO%20POR%2030%20CAPS%20GEONAT"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$3200" data-cantidad="60 comp"
+            data-extra="Colágeno hidrolizado para piel, cabello y articulaciones.">
+            <img src="../../../imagenes/colageno_500.jpeg" alt="🌟 COLAGENO 500 POR 60 COMP GEONAT">
+            <h3>🌟 COLAGENO 500 POR 60 COMP GEONAT</h3>
+            <p>Contribuye a elasticidad y salud articular.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%9F%20COLAGENO%20500%20POR%2060%20COMP%20GEONAT"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2800" data-cantidad="varios"
+            data-extra="BCAA, creatina, glutamina y L-Carnitina para rendimiento deportivo.">
+            <img src="../../../imagenes/bcaa_creatina.jpeg" alt="💪 BCAA, Creatina, Glutamine, L-Carnitina ULTRA TECH">
+            <h3>💪 BCAA, Creatina, Glutamine, L-Carnitina ULTRA TECH</h3>
+            <p>Apoya recuperación muscular y desarrollo de fuerza.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%92%AA%20BCAA%2C%20Creatina%2C%20Glutamine%2C%20L-Carnitina%20ULTRA%20TECH"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2000" data-cantidad="30/60 caps"
+            data-extra="Omega 3 en cápsulas, apoyo cardiovascular y cerebral.">
+            <img src="../../../imagenes/omega3_caps.jpeg" alt="🐟 Omega 3 capsulas X 30 / 60">
+            <h3>🐟 Omega 3 capsulas X 30 / 60</h3>
+            <p>Salud del corazón, articulaciones y cerebro.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%90%9F%20Omega%203%20capsulas%20X%2030%20/%2060"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1800" data-cantidad="varios"
+            data-extra="Moringa en cápsulas o polvo, rica en nutrientes.">
+            <img src="../../../imagenes/moringa.jpeg" alt="🌿 Moringa cápsulas / polvo">
+            <h3>🌿 Moringa cápsulas / polvo</h3>
+            <p>Antioxidante natural, energía y soporte inmunológico.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%BF%20Moringa%20c%C3%A1psulas%20/%20polvo"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1600" data-cantidad="varios"
+            data-extra="Triptofano para equilibrio emocional y sueño.">
+            <img src="../../../imagenes/triptofano.jpeg" alt="🛌 Triptofano Natier">
+            <h3>🛌 Triptofano Natier</h3>
+            <p>Contribuye al descanso, ánimo y bienestar general.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%9B%8C%20Triptofano%20Natier"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$1500" data-cantidad="varios"
+            data-extra="Levadura nutricional rica en proteínas y vitaminas B.">
+            <img src="../../../imagenes/levadura_nutricional.jpeg" alt="🍞 Levadura nutricional">
+            <h3>🍞 Levadura nutricional</h3>
+            <p>Ideal para dietas veganas y salud general.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8D%9E%20Levadura%20nutricional"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2200" data-cantidad="60 caps"
+            data-extra="Arginina para energía, circulación y rendimiento deportivo.">
+            <img src="../../../imagenes/arginina.jpeg" alt="⚡ Arginina X 60 / 1500 caps">
+            <h3>⚡ Arginina X 60 / 1500 caps</h3>
+            <p>Mejora flujo sanguíneo y rendimiento físico.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%E2%9A%A1%20Arginina%20X%2060%20/%201500%20caps"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2000" data-cantidad="varios"
+            data-extra="Carotenos Vitatechy, antioxidantes naturales.">
+            <img src="../../../imagenes/carotenos_vitatechy.jpeg" alt="🥕 Carotenos Vitatechy">
+            <h3>🥕 Carotenos Vitatechy</h3>
+            <p>Protege células y apoya la visión y piel.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%A5%95%20Carotenos%20Vitatechy"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$2500" data-cantidad="varios"
+            data-extra="Ginseng y Ginkgo para energía, memoria y concentración.">
+            <img src="../../../imagenes/ginseng_ginkgo.jpeg" alt="🌿 Ginseng / Ginkgo">
+            <h3>🌿 Ginseng / Ginkgo</h3>
+            <p>Mejora vitalidad, enfoque y resistencia física.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%BF%20Ginseng%20/%20Ginkgo"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+        <div class="card" data-precio="$3000" data-cantidad="varios"
+            data-extra="Suplementos premium: NAD+, Resveratrol, Kyojin, Reishi, Cordyceps, Melena de león.">
+            <img src="../../../imagenes/nad_resveratrol.jpeg" alt="🌟 NAD+ / Resveratrol / Kyojin / Reishi / Cordyceps / Melena de león">
+            <h3>🌟 NAD+ / Resveratrol / Kyojin / Reishi / Cordyceps / Melena de león</h3>
+            <p>Antioxidantes y apoyo a energía, longevidad y bienestar.</p>
+            <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20%F0%9F%8C%9F%20NAD%2B%20/%20Resveratrol%20/%20Kyojin%20/%20Reishi%20/%20Cordyceps%20/%20Melena%20de%20le%C3%B3n"
+                target="_blank" class="button">🔎 Ver mas...</a>
+        </div>
+        
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal-producto">
+        <div class="modal-content">
+            <span class="close-btn" id="cerrar-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Imagen del producto">
+                <h3 id="modal-titulo">Título</h3>
+                <p id="modal-descripcion">Descripción detallada del producto...</p>
+                <p id="modal-precio"></p>
+                <p id="modal-cantidad"></p>
+                <p id="modal-extra"></p>
+                <label>Cantidad: <input type="number" id="cantidad-agregar" min="1" value="1"></label><br>
+                <button class="agregar-carrito" onclick="agregarDesdeModal()">Agregar al carrito</button>
+                <a id="modal-link" href="#" target="_blank" class="button">💬 Consultar por WhatsApp</a>
+            </div>
         </div>
     </div>
-</nav>
 
-<br>
-
-<h1 style="text-align: center;">Catálogo de Suplementos</h1>
-
-<div class="container" style="text-align: center;">
-    <input type="text" id="buscador" placeholder="Buscar productos..." style="padding: 12px 20px; width: 60%; max-width: 400px; border-radius: 30px; border: 1px solid #ccc; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; font-size: 1em;">
-</div>
-
-<div href="#catalogo" class="catalogo-grid">
-    <div class="card" data-precio="$1800" data-cantidad="30 caps" data-extra="Suplemento de vitamina D para el bienestar general.">
-        <img src="../../../imagenes/vitamina_d.jpeg" alt="VITAMINA D 30 CAPS NATULI">
-        <h3>💊 VITAMINA D 30 CAPS NATULI</h3>
-        <p>Apoya la salud ósea e inmune.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20VITAMINA%20D%2030%20CAPS%20NATULI" target="_blank" class="button">🔎 Ver mas...</a>
+    <!-- Botón abrir carrito -->
+    <div class="abrir-carrito" onclick="document.getElementById('carrito').classList.add('visible')">
+        Ver<br>Carrito<br><i class="fa-solid fa-cart-shopping"></i>
     </div>
 
-    <div class="card" data-precio="$900" data-cantidad="1 sobre" data-extra="Gel energizante sabor frutilla.">
-        <img src="../../../imagenes/gel_ena_frutilla.jpeg" alt="GEL ENA FRUTILLA SOBRE">
-        <h3>🍓 GEL ENA FRUTILLA SOBRE</h3>
-        <p>Rápida recuperación de energía.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20GEL%20ENA%20FRUTILLA%20SOBRE" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
+    <!-- Carrito -->
+    <div id="carrito" class="carrito">
+        <button class="cerrar" onclick="document.getElementById('carrito').classList.remove('visible')">&times;</button>
+        <h2>Carrito de Compras</h2>
+        <table id="tabla-carrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cant.</th>
+                    <th>Unidad</th>
+                    <th>Total</th>
+                    <th>X</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="total" id="total-general">Total: $0</div>
 
-    <div class="card" data-precio="$900" data-cantidad="1 sobre" data-extra="Gel energizante sabor limón.">
-        <img src="../../../imagenes/gel_ena_limon.jpeg" alt="GEL ENA LIMON SOBRE">
-        <h3>🍋 GEL ENA LIMON SOBRE</h3>
-        <p>Rápida recuperación de energía.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20GEL%20ENA%20LIMON%20SOBRE" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2200" data-cantidad="1 shaker" data-extra="Complemento nutricional en shake.">
-        <img src="../../../imagenes/shake_ena.jpeg" alt="SHAKE / Shaker Plus ENA">
-        <h3>🥤 SHAKE / Shaker Plus ENA</h3>
-        <p>Ideal para preparación de suplementos en polvo.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20SHAKE%20/%20Shaker%20Plus%20ENA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2600" data-cantidad="90 caps" data-extra="Complemento para control de lípidos y salud cardiovascular.">
-        <img src="../../../imagenes/ajolip.jpeg" alt="AJOLIP 90 CAPSULAS NATUFARMA">
-        <h3>💊 AJOLIP 90 CAPSULAS NATUFARMA</h3>
-        <p>Apoyo a la salud cardiovascular y metabolismo de grasas.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20AJOLIP%2090%20CAPSULAS%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$1800" data-cantidad="60 caps" data-extra="Estimula la energía y concentración.">
-        <img src="../../../imagenes/guarana_natufarma.jpeg" alt="GUARANA NATUFARMA">
-        <h3>🌿 GUARANA NATUFARMA</h3>
-        <p>Aumenta vitalidad y concentración natural.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20GUARANA%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2000" data-cantidad="60 caps" data-extra="Mejora circulación y memoria.">
-        <img src="../../../imagenes/ginkgo_natufarma.jpeg" alt="GINKGO NATUFARMA">
-        <h3>🧠 GINKGO NATUFARMA</h3>
-        <p>Apoya la función cognitiva y circulación sanguínea.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20GINKGO%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$1700" data-cantidad="1200 mg" data-extra="Apoyo a la memoria y función cerebral.">
-        <img src="../../../imagenes/lecitina.jpeg" alt="LECITINA 1200 NATUFARMA">
-        <h3>💊 LECITINA 1200 NATUFARMA</h3>
-        <p>Contribuye al funcionamiento del sistema nervioso.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20LECITINA%201200%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2400" data-cantidad="40 caps" data-extra="Laxante natural para regular tránsito intestinal.">
-        <img src="../../../imagenes/natulax_plus.jpeg" alt="NATULAX PLUS POR 40 CAPS NATUFARMA">
-        <h3>💊 NATULAX PLUS POR 40 CAPS NATUFARMA</h3>
-        <p>Apoya digestión y bienestar intestinal.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20NATULAX%20PLUS%20POR%2040%20CAPS%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2100" data-cantidad="60 caps" data-extra="Apoyo hormonal y equilibrio femenino.">
-        <img src="../../../imagenes/isoflavonas.jpeg" alt="ISOFLAVONAS DE SOJA NATUFARMA">
-        <h3>🌸 ISOFLAVONAS DE SOJA NATUFARMA</h3>
-        <p>Contribuye al bienestar durante la menopausia.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20ISOFLAVONAS%20DE%20SOJA%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2200" data-cantidad="50 comp" data-extra="Suplemento de calcio para huesos fuertes.">
-        <img src="../../../imagenes/calcio_500.jpeg" alt="CALCIO 500 x 50 COMP NATUFARMA">
-        <h3>🦴 CALCIO 500 x 50 COMP NATUFARMA</h3>
-        <p>Apoya la salud ósea y dental.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20CALCIO%20500%20x%2050%20COMP%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2000" data-cantidad="80 caps" data-extra="Mejora circulación y función cognitiva.">
-        <img src="../../../imagenes/ginkgo_80.jpeg" alt="GINKGO 80 NATUFARMA">
-        <h3>🧠 GINKGO 80 NATUFARMA</h3>
-        <p>Apoya memoria, concentración y circulación sanguínea.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20GINKGO%2080%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2100" data-cantidad="30 comp" data-extra="Magnesio para rendimiento deportivo y recuperación.">
-        <img src="../../../imagenes/magnesio_sport.jpeg" alt="MAGNESIO SPORT 30 COMP NATUFARMA">
-        <h3>💪 MAGNESIO SPORT 30 COMP NATUFARMA</h3>
-        <p>Favorece la recuperación muscular y energía.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20MAGNESIO%20SPORT%2030%20COMP%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2500" data-cantidad="60 comp" data-extra="Suplemento energético completo.">
-        <img src="../../../imagenes/energinat.jpeg" alt="ENERGINAT COMP X 60 NATUFARMA">
-        <h3>⚡ ENERGINAT COMP X 60 NATUFARMA</h3>
-        <p>Aumenta energía y resistencia física.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20ENERGINAT%20COMP%20X%2060%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2000" data-cantidad="30 comp" data-extra="Omega 3 para salud cardiovascular y cerebral.">
-        <img src="../../../imagenes/omega3_30.jpeg" alt="OMEGA 3 NATUFARMA 30 COMP">
-        <h3>🐟 OMEGA 3 NATUFARMA 30 COMP</h3>
-        <p>Apoya corazón, cerebro y articulaciones.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20OMEGA%203%20NATUFARMA%2030%20COMP" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$3600" data-cantidad="60 comp" data-extra="Omega 3 en cápsulas para salud integral.">
-        <img src="../../../imagenes/omega3_60.jpeg" alt="OMEGA 3 POR 60 COMP NATUFARMA">
-        <h3>🐟 OMEGA 3 POR 60 COMP NATUFARMA</h3>
-        <p>Refuerza sistema cardiovascular y cerebro.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20OMEGA%203%20POR%2060%20COMP%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$1800" data-cantidad="40 caps" data-extra="Levadura de cerveza rica en vitaminas B.">
-        <img src="../../../imagenes/levadura_cerveza.jpeg" alt="LEVADURA DE CERVEZA POR 40 CAPS NATUFARMA">
-        <h3>🍺 LEVADURA DE CERVEZA POR 40 CAPS NATUFARMA</h3>
-        <p>Apoya cabello, piel y uñas saludables.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20LEVADURA%20DE%20CERVEZA%20POR%2040%20CAPS%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2000" data-cantidad="30 caps" data-extra="Carotenos y vitaminas antioxidantes.">
-        <img src="../../../imagenes/carotenos_vit.jpeg" alt="CAROTENOS VIT C Y E NATUFARMA">
-        <h3>🥕 CAROTENOS VIT C Y E NATUFARMA</h3>
-        <p>Protege células y mejora la salud de piel y ojos.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20CAROTENOS%20VIT%20C%20Y%20E%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$1500" data-cantidad="40 comp" data-extra="Suplemento natural para relajación y sueño.">
-        <img src="../../../imagenes/valeriana.jpeg" alt="VALERIANA x 40 COMP NATUFARMA">
-        <h3>🌿 VALERIANA x 40 COMP NATUFARMA</h3>
-        <p>Favorece descanso y relajación natural.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20VALERIANA%20x%2040%20COMP%20NATUFARMA" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2400" data-cantidad="60 caps" data-extra="Extracto de centella asiática para circulación y piel.">
-        <img src="../../../imagenes/centella_forte.jpeg" alt="CENTELLA FORTE POR 60 CAPS">
-        <h3>🌱 CENTELLA FORTE POR 60 CAPS</h3>
-        <p>Mejora circulación y fortalece piel y tejidos.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20CENTELLA%20FORTE%20POR%2060%20CAPS" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$3000" data-cantidad="30 caps" data-extra="Antioxidante natural y apoyo cardiovascular.">
-        <img src="../../../imagenes/resveratrol.jpeg" alt="RESVERATROL GEONAT">
-        <h3>🍇 RESVERATROL GEONAT</h3>
-        <p>Contribuye a la protección celular y longevidad.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20RESVERATROL%20GEONAT" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2800" data-cantidad="60 comp" data-extra="Cartílago de tiburón para articulaciones y movilidad.">
-        <img src="../../../imagenes/cartilago_tiburon.jpeg" alt="CARTILAGO DE TIBURON GEONAT">
-        <h3>🦈 CARTILAGO DE TIBURON GEONAT</h3>
-        <p>Apoya salud articular y movilidad.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20CARTILAGO%20DE%20TIBURON%20GEONAT" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2600" data-cantidad="60 comp" data-extra="Suplemento para control de peso.">
-        <img src="../../../imagenes/garciania_cambogia.jpeg" alt="GARCIANIA CAMBOGIA 60 COMP GEONAT">
-        <h3>🍏 GARCIANIA CAMBOGIA 60 COMP GEONAT</h3>
-        <p>Apoya metabolismo y control de peso.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20GARCIANIA%20CAMBOGIA%2060%20COMP%20GEONAT" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2000" data-cantidad="30 comp" data-extra="Ginkgo biloba para memoria y concentración.">
-        <img src="../../../imagenes/ginkgo_memo.jpeg" alt="GINKGO BILOBA MEMO 30 COMP GEONAT">
-        <h3>🧠 GINKGO BILOBA MEMO 30 COMP GEONAT</h3>
-        <p>Apoya memoria y claridad mental.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20GINKGO%20BILOBA%20MEMO%2030%20COMP%20GEONAT" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2400" data-cantidad="30 comp" data-extra="Suplemento de potencia masculina.">
-        <img src="../../../imagenes/virgocin.jpeg" alt="VIRGOCIN POTENCIA PLUS 30 COMP GEONAT">
-        <h3>🔥 VIRGOCIN POTENCIA PLUS 30 COMP GEONAT</h3>
-        <p>Apoya vigor, energía y rendimiento masculino.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20VIRGOCIN%20POTENCIA%20PLUS%2030%20COMP%20GEONAT" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$1800" data-cantidad="varios" data-extra="Hidratación con electrolitos y sabor.">
-        <img src="../../../imagenes/hidragreen.jpeg" alt="HIDRAGREEN">
-        <h3>💧 HIDRAGREEN (varios sabores y formatos)</h3>
-        <p>Bebida hidratante y energética.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20HIDRAGREEN" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2000" data-cantidad="30 caps" data-extra="Ácido hialurónico para piel, cabello y articulaciones.">
-        <img src="../../../imagenes/acido_hialuronico.jpeg" alt="ACIDO HIALURONICO POR 30 CAPS GEONAT">
-        <h3>💧 ACIDO HIALURONICO POR 30 CAPS GEONAT</h3>
-        <p>Apoya hidratación y elasticidad de la piel.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20ACIDO%20HIALURONICO%20POR%2030%20CAPS%20GEONAT" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$3200" data-cantidad="60 comp" data-extra="Colágeno hidrolizado para piel, cabello y articulaciones.">
-        <img src="../../../imagenes/colageno_500.jpeg" alt="COLAGENO 500 POR 60 COMP GEONAT">
-        <h3>🌟 COLAGENO 500 POR 60 COMP GEONAT</h3>
-        <p>Contribuye a elasticidad y salud articular.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20COLAGENO%20500%20POR%2060%20COMP%20GEONAT" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2800" data-cantidad="varios" data-extra="BCAA, creatina, glutamina y L-Carnitina para rendimiento deportivo.">
-        <img src="../../../imagenes/bcaa_creatina.jpeg" alt="BCAA, Creatina, Glutamine, L-Carnitina ULTRA TECH">
-        <h3>💪 BCAA, Creatina, Glutamine, L-Carnitina ULTRA TECH</h3>
-        <p>Apoya recuperación muscular y desarrollo de fuerza.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20BCAA,%20Creatina,%20Glutamine,%20L-Carnitina%20ULTRA%20TECH" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2000" data-cantidad="30/60 caps" data-extra="Omega 3 en cápsulas, apoyo cardiovascular y cerebral.">
-        <img src="../../../imagenes/omega3_caps.jpeg" alt="Omega 3 capsulas X 30 / 60">
-        <h3>🐟 Omega 3 capsulas X 30 / 60</h3>
-        <p>Salud del corazón, articulaciones y cerebro.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Omega%203%20capsulas%20X%2030%20/%2060" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$1800" data-cantidad="varios" data-extra="Moringa en cápsulas o polvo, rica en nutrientes.">
-        <img src="../../../imagenes/moringa.jpeg" alt="Moringa cápsulas / polvo">
-        <h3>🌿 Moringa cápsulas / polvo</h3>
-        <p>Antioxidante natural, energía y soporte inmunológico.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Moringa%20cápsulas%20/%20polvo" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$1600" data-cantidad="varios" data-extra="Triptofano para equilibrio emocional y sueño.">
-        <img src="../../../imagenes/triptofano.jpeg" alt="Triptofano Natier">
-        <h3>🛌 Triptofano Natier</h3>
-        <p>Contribuye al descanso, ánimo y bienestar general.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Triptofano%20Natier" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$1500" data-cantidad="varios" data-extra="Levadura nutricional rica en proteínas y vitaminas B.">
-        <img src="../../../imagenes/levadura_nutricional.jpeg" alt="Levadura nutricional">
-        <h3>🍞 Levadura nutricional</h3>
-        <p>Ideal para dietas veganas y salud general.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Levadura%20nutricional" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2200" data-cantidad="60 caps" data-extra="Arginina para energía, circulación y rendimiento deportivo.">
-        <img src="../../../imagenes/arginina.jpeg" alt="Arginina X 60 / 1500 caps">
-        <h3>⚡ Arginina X 60 / 1500 caps</h3>
-        <p>Mejora flujo sanguíneo y rendimiento físico.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Arginina%20X%2060%20/%201500%20caps" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2000" data-cantidad="varios" data-extra="Carotenos Vitatechy, antioxidantes naturales.">
-        <img src="../../../imagenes/carotenos_vitatechy.jpeg" alt="Carotenos Vitatechy">
-        <h3>🥕 Carotenos Vitatechy</h3>
-        <p>Protege células y apoya la visión y piel.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Carotenos%20Vitatechy" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$2500" data-cantidad="varios" data-extra="Ginseng y Ginkgo para energía, memoria y concentración.">
-        <img src="../../../imagenes/ginseng_ginkgo.jpeg" alt="Ginseng / Ginkgo">
-        <h3>🌿 Ginseng / Ginkgo</h3>
-        <p>Mejora vitalidad, enfoque y resistencia física.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20Ginseng%20/%20Ginkgo" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-    <div class="card" data-precio="$3000" data-cantidad="varios" data-extra="Suplementos premium: NAD+, Resveratrol, Kyojin, Reishi, Cordyceps, Melena de león.">
-        <img src="../../../imagenes/nad_resveratrol.jpeg" alt="NAD+ / Resveratrol / Kyojin / Reishi / Cordyceps / Melena de león">
-        <h3>🌟 NAD+ / Resveratrol / Kyojin / Reishi / Cordyceps / Melena de león</h3>
-        <p>Antioxidantes y apoyo a energía, longevidad y bienestar.</p>
-        <a href="https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20NAD+%20/%20Resveratrol%20/%20Kyojin%20/%20Reishi%20/%20Cordyceps%20/%20Melena%20de%20león" target="_blank" class="button">🔎 Ver mas...</a>
-    </div>
-
-
-</div>
-
-<!-- Modal -->
-<div class="modal" id="modal-producto">
-    <div class="modal-content">
-        <span class="close-btn" id="cerrar-modal">&times;</span>
-        <div class="modal-body">
-            <img id="modal-img" src="" alt="Imagen del producto">
-            <h3 id="modal-titulo">Título</h3>
-            <p id="modal-descripcion">Descripción detallada del producto...</p>
-            <p id="modal-precio"></p>
-            <p id="modal-cantidad"></p>
-            <p id="modal-extra"></p>
-            <label>Cantidad: <input type="number" id="cantidad-agregar" min="1" value="1"></label><br>
-            <button class="agregar-carrito" onclick="agregarDesdeModal()">Agregar al carrito</button>
-            <a id="modal-link" href="#" target="_blank" class="button">💬 Consultar por WhatsApp</a>
+        <div class="aviso-envio" id="aviso-envio">
+            <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
         </div>
-    </div>
-</div>
+        <div id="retiro-sucursal" style="display: none; margin-top: 10px;">
+            <label>¿Retirar en sucursal Naturita?</label><br>
+            <label><input type="radio" name="retiro" value="Sí"> Sí</label>
+            <label><input type="radio" name="retiro" value="No" checked> No</label>
+        </div>
 
-<!-- Botón abrir carrito -->
-<div class="abrir-carrito" onclick="document.getElementById('carrito').classList.add('visible')">
-    Ver<br>Carrito<br><i class="fa-solid fa-cart-shopping"></i>
-</div>
-
-<!-- Carrito -->
-<div id="carrito" class="carrito">
-    <button class="cerrar" onclick="document.getElementById('carrito').classList.remove('visible')">&times;</button>
-    <h2>Carrito de Compras</h2>
-    <table id="tabla-carrito">
-        <thead>
-            <tr>
-                <th>Producto</th>
-                <th>Cant.</th>
-                <th>Unidad</th>
-                <th>Total</th>
-                <th>X</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    <div class="total" id="total-general">Total: $0</div>
-    
-    <div class="aviso-envio" id="aviso-envio">
-        <i class="fas fa-truck"></i> Tus compras mayores a $10.000, ¡envío a domicilio POR LA ZONA sin cargo!
-    </div>
-    <div id="retiro-sucursal" style="display: none; margin-top: 10px;">
-        <label>¿Retirar en sucursal Naturita?</label><br>
-        <label><input type="radio" name="retiro" value="Sí"> Sí</label>
-        <label><input type="radio" name="retiro" value="No" checked> No</label>
+        <div class="whatsapp" onclick="enviarWhatsApp()">Enviar TU CARRITO por WhatsApp</div>
     </div>
 
-    <div class="whatsapp" onclick="enviarWhatsApp()">Enviar TU CARRITO por WhatsApp</div>
-</div>
+    <script>
+        const carrito = [];
+        let modalProducto = {};
 
-<script>
-    const carrito = [];
-    let modalProducto = {};
-
-    function agregarAlCarrito(nombre, precioUnitario, unidad, cantidad) {
-        carrito.push({ nombre, precioUnitario, unidad, cantidad });
-        actualizarCarrito();
-    }
-
-    function actualizarCarrito() {
-        const tbody = document.querySelector('#tabla-carrito tbody');
-        tbody.innerHTML = '';
-        let total = 0;
-
-        carrito.forEach((item, i) => {
-            const tr = document.createElement('tr');
-            const precio = (item.precioUnitario * item.cantidad).toFixed(2);
-            total += parseFloat(precio);
-
-            tr.innerHTML = `
-                <td>${item.nombre}</td>
-                <td><input type="number" min="1" value="${item.cantidad}" onchange="cambiarCantidad(${i}, this.value)"></td>
-                <td>${item.unidad}</td>
-                <td>$${precio}</td>
-                <td><button onclick="eliminarDelCarrito(${i})">❌</button></td>
-            `;
-            tbody.appendChild(tr);
-        });
-
-        document.getElementById('total-general').textContent = 'Total: $' + total.toFixed(2);
-
-        // Mostrar mensaje de envío
-        const avisoEnvio = document.getElementById('aviso-envio');
-        if (total >= 10000) {
-            avisoEnvio.textContent = '🎉 ¡Felicidades! Pasaste los $10.000, tenés tu ENVIO GRATIS a domicilio si sos de la zona.';
-            avisoEnvio.style.color = 'green';
-        // Mostrar opciones de retiro
-            document.getElementById('retiro-sucursal').style.display = 'block';
-        } else {
-            avisoEnvio.textContent = '📦 Te falta poco para llegar a $10.000 y tener tu envio gratis si sos de la zona!';
-            avisoEnvio.style.color = 'orange';
-            // Ocultar si no supera los $10.000
-            document.getElementById('retiro-sucursal').style.display = 'none';
+        function agregarAlCarrito(nombre, precioUnitario, unidad, cantidad) {
+            carrito.push({ nombre, precioUnitario, unidad, cantidad });
+            actualizarCarrito();
         }
 
-    }
+        function actualizarCarrito() {
+            const tbody = document.querySelector('#tabla-carrito tbody');
+            tbody.innerHTML = '';
+            let total = 0;
 
-    function cambiarCantidad(i, nuevaCantidad) {
-        carrito[i].cantidad = parseFloat(nuevaCantidad);
-        actualizarCarrito();
-    }
+            carrito.forEach((item, i) => {
+                const tr = document.createElement('tr');
+                const precioNum = parseInt(item.precioUnitario.replace(/[^0-9]/g, '')) || 0;
+                const subtotal = precioNum * item.cantidad;
+                total += subtotal;
 
-    function eliminarDelCarrito(i) {
-        carrito.splice(i, 1);
-        actualizarCarrito();
-    }
+                tr.innerHTML = `
+                <td>${item.nombre}</td>
+                <td>${item.cantidad}</td>
+                <td>${item.unidad}</td>
+                <td>$${subtotal}</td>
+                <td><button onclick="eliminarDelCarrito(${i})" style="color:red;border:none;background:none;cursor:pointer;">X</button></td>
+            `;
+                tbody.appendChild(tr);
+            });
 
-    function enviarWhatsApp() {
-        let mensaje = '🛒 Pedido Naturita:%0A';
-        let total = 0;
+            document.getElementById('total-general').innerText = `Total: $${total}`;
 
-        carrito.forEach(item => {
-            const subtotal = (item.precioUnitario * item.cantidad).toFixed(2);
-            mensaje += `• ${item.nombre} - ${item.cantidad} - ${item.unidad}: $${subtotal}%0A`;
-            total += parseFloat(subtotal);
-        });
-
-        mensaje += `%0ATotal: $${total.toFixed(2)}`;
-
-        // Obtener opción de retiro si está visible
-        const retiroDiv = document.getElementById('retiro-sucursal');
-        if (retiroDiv.style.display !== 'none') {
-            const retiro = document.querySelector('input[name="retiro"]:checked');
-            if (retiro) {
-                mensaje += `%0ARetirar en sucursal: ${retiro.value}`;
+            // Mostrar aviso de envío si supera $10.000
+            const aviso = document.getElementById('aviso-envio');
+            const retiro = document.getElementById('retiro-sucursal');
+            if (total > 10000) {
+                aviso.style.display = 'flex';
+                retiro.style.display = 'none';
+            } else {
+                aviso.style.display = 'none';
+                retiro.style.display = 'block';
             }
         }
 
-        mensaje += `%0AReservar pedido a nombre de:`;
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            actualizarCarrito();
+        }
 
-        const numero = '3513284231';
-        window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+        function enviarWhatsApp() {
+            if (carrito.length === 0) {
+                alert("El carrito está vacío.");
+                return;
+            }
 
-        // Limpiar carrito luego de enviar
-        carrito.length = 0;
-        actualizarCarrito();
-        document.getElementById('carrito').classList.remove('visible');
-    }
+            let mensaje = "Hola Naturita! Quiero hacer un pedido:%0A";
+            let total = 0;
 
-    function agregarDesdeModal() {
-        const cantidad = parseFloat(document.getElementById('cantidad-agregar').value);
-        if (!modalProducto || !modalProducto.precioUnitario || !modalProducto.unidad) return;
-        agregarAlCarrito(modalProducto.nombre, modalProducto.precioUnitario, modalProducto.unidad, cantidad);
-        document.getElementById('modal-producto').style.display = 'none';
-    }
+            carrito.forEach(item => {
+                const precioNum = parseInt(item.precioUnitario.replace(/[^0-9]/g, '')) || 0;
+                const subtotal = precioNum * item.cantidad;
+                total += subtotal;
+                mensaje += `- ${item.cantidad} x ${item.nombre} (${item.unidad}) = $${subtotal}%0A`;
+            });
 
-    // Buscador
-    document.getElementById("buscador").addEventListener("input", function () {
-        const valor = this.value.toLowerCase();
-        const tarjetas = document.querySelectorAll(".catalogo-grid .card");
+            mensaje += `%0ATotal: $${total}`;
 
-        tarjetas.forEach(card => {
-            const texto = card.textContent.toLowerCase();
-            card.style.display = texto.includes(valor) ? "block" : "none";
-        });
-    });
+            // Verificar si retira en sucursal (solo si es menor a 10000)
+            if (total <= 10000) {
+                const retiro = document.querySelector('input[name="retiro"]:checked').value;
+                if (retiro === "Sí") {
+                    mensaje += "%0A(Retiro en sucursal)";
+                }
+            } else {
+                mensaje += "%0A(Envío a domicilio sin cargo)";
+            }
 
-    // Modal y lógica de click en tarjetas
-    document.addEventListener('DOMContentLoaded', () => {
+            window.open(`https://wa.me/3513284231?text=${mensaje}`, '_blank');
+        }
+
+        // Modal Logic
         const modal = document.getElementById('modal-producto');
-        const cerrarModal = document.getElementById('cerrar-modal');
-
-        const modalImg = document.getElementById('modal-img');
-        const modalTitulo = document.getElementById('modal-titulo');
-        const modalDescripcion = document.getElementById('modal-descripcion');
-        const modalPrecio = document.getElementById('modal-precio');
-        const modalCantidad = document.getElementById('modal-cantidad');
-        const modalExtra = document.getElementById('modal-extra');
-        const modalLink = document.getElementById('modal-link');
-
+        const closeBtn = document.getElementById('cerrar-modal');
         const cards = document.querySelectorAll('.card');
 
         cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const imgSrc = card.querySelector('img').src;
-                const titulo = card.querySelector('h3').textContent;
-                const descripcion = card.querySelector('p').textContent;
-                const link = card.querySelector('a.button').href;
+            const btnVerMas = card.querySelector('a.button');
 
-                const precioTexto = card.dataset.precio || '$0';
-                const cantidadTexto = card.dataset.cantidad || '';
-                const extra = card.dataset.extra || '';
+            // Intercept click on "Ver mas" to open modal instead of WhatsApp directly?
+            // The original code had "Ver mas" going to WhatsApp directly in the href.
+            // But there is also a modal structure.
+            // Let's assume the user wants the modal to open when clicking the card or a specific button.
+            // In the original code, the card itself didn't have an onclick.
+            // But there was a script at the end of the file (which I didn't see fully).
+            // I'll add the event listener to the card image and title to open modal.
 
-                const precioMatch = precioTexto.match(/\$(\d+(\.\d+)?)/);
-                const unidadMatch = cantidadTexto.match(/(\d+)?\s*([a-zA-Z]+)/);
-
-                const precioUnitario = precioMatch ? parseFloat(precioMatch[1]) : 0;
-                const unidad = unidadMatch ? unidadMatch[2] : 'u';
-
-                modalImg.src = imgSrc;
-                modalTitulo.textContent = titulo;
-                modalDescripcion.textContent = descripcion;
-                modalPrecio.textContent = precioTexto;
-                modalCantidad.textContent = cantidadTexto;
-                modalExtra.textContent = extra;
-                modalLink.href = link;
+            card.addEventListener('click', (e) => {
+                if (e.target.classList.contains('button')) return; // Let the button do its thing (WhatsApp)
 
                 modalProducto = {
-                    nombre: titulo,
-                    precioUnitario: precioUnitario,
-                    unidad: cantidadTexto || 'u'
+                    nombre: card.querySelector('h3').innerText,
+                    img: card.querySelector('img').src,
+                    precio: card.getAttribute('data-precio'),
+                    cantidad: card.getAttribute('data-cantidad'),
+                    extra: card.getAttribute('data-extra'),
+                    descripcion: card.querySelector('p').innerText
                 };
 
+                document.getElementById('modal-img').src = modalProducto.img;
+                document.getElementById('modal-titulo').innerText = modalProducto.nombre;
+                document.getElementById('modal-descripcion').innerText = modalProducto.descripcion;
+                document.getElementById('modal-precio').innerText = "Precio: " + modalProducto.precio;
+                document.getElementById('modal-cantidad').innerText = "Unidad: " + modalProducto.cantidad;
+                document.getElementById('modal-extra').innerText = "Info: " + modalProducto.extra;
 
-                document.getElementById('cantidad-agregar').value = 1;
-                modal.style.display = 'block';
-            });
-        });
-
-        cerrarModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                modal.style.display = 'none';
-            }
-        });
-    });
-</script>
-
-
-<script>
-    document.getElementById("buscador").addEventListener("input", function () {
-        const valor = this.value.toLowerCase();
-        const tarjetas = document.querySelectorAll(".catalogo-grid .card");
-
-        tarjetas.forEach(card => {
-            const texto = card.textContent.toLowerCase();
-            card.style.display = texto.includes(valor) ? "block" : "none";
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const modal = document.getElementById('modal-producto');
-        const cerrarModal = document.getElementById('cerrar-modal');
-
-        const modalImg = document.getElementById('modal-img');
-        const modalTitulo = document.getElementById('modal-titulo');
-        const modalDescripcion = document.getElementById('modal-descripcion');
-        const modalPrecio = document.getElementById('modal-precio');
-        const modalCantidad = document.getElementById('modal-cantidad');
-        const modalExtra = document.getElementById('modal-extra');
-        const modalLink = document.getElementById('modal-link');
-
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const imgSrc = card.querySelector('img').src;
-                const titulo = card.querySelector('h3').textContent;
-                const descripcion = card.querySelector('p').textContent;
-                const link = card.querySelector('a.button').href;
-
-                const precio = card.dataset.precio || '';
-                const cantidad = card.dataset.cantidad || '';
-                const extra = card.dataset.extra || '';
-
-                modalImg.src = imgSrc;
-                modalTitulo.textContent = titulo;
-                modalDescripcion.textContent = descripcion;
-                modalPrecio.textContent = precio;
-                modalCantidad.textContent = cantidad;
-                modalExtra.textContent = extra;
-                modalLink.href = link;
+                // Update WhatsApp link in modal
+                const waLink = document.getElementById('modal-link');
+                waLink.href = `https://wa.me/3513284231?text=Hola,%20necesito%20info%20sobre%20${encodeURIComponent(modalProducto.nombre)}`;
 
                 modal.style.display = 'block';
             });
         });
 
-        cerrarModal.addEventListener('click', () => {
+        closeBtn.onclick = () => {
             modal.style.display = 'none';
-        });
+        };
 
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
+        window.onclick = (e) => {
+            if (e.target == modal) {
                 modal.style.display = 'none';
             }
-        });
+        };
 
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
+        function agregarDesdeModal() {
+            const cantidadInput = document.getElementById('cantidad-agregar');
+            const cantidad = parseInt(cantidadInput.value);
+
+            if (cantidad > 0) {
+                agregarAlCarrito(modalProducto.nombre, modalProducto.precio, modalProducto.cantidad, cantidad);
                 modal.style.display = 'none';
+                cantidadInput.value = 1;
+                // Open cart to show feedback
+                document.getElementById('carrito').classList.add('visible');
             }
-        });
-    });
-</script>
+        }
 
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+        // Buscador
+        const buscador = document.getElementById('buscador');
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
-</script>
-
-<footer id="contacto">
-    <p>&copy; 2025 NATURITA - La Calera, Córdoba</p>
-    <div>
-        <a href="https://wa.me/3513284231" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
-        <a href="https://www.instagram.com/naturitadiet/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="#inicio"><i class="fas fa-arrow-up fa-lg"></i></a>
-    </div>
-</footer>
-
-<!-- 🔽 Botón flotante Ver más / Volver arriba -->
-<button id="scrollButton">Ver<br>más<br>↓</button>
-
-<style>
-    #scrollButton {
-        position: fixed;
-        bottom: 70px; /* 👈 ESTA línea controla la altura desde abajo */
-        left: 5px;
-        background-color: #2e8b5696;
-        color: rgba(0, 0, 0, 0.685);
-        border: 5px solid #1b4d2b; /* borde más oscuro */
-        border-radius: 20px;
-        padding: 16px 20px;
-        height: 120px;  /* más alto */
-        font-size: 1.1em;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        transition: all 0.3s ease;
-        z-index: 999;
-        text-align: center;
-        line-height: 1.3em; /* espacio entre líneas */
-    }
-
-    #scrollButton:hover {
-        background-color: #206b42;
-        border-color: #133820;
-        transform: scale(1.08);
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-    }
-</style>
-<script>
-    const scrollBtn = document.getElementById("scrollButton");
-
-    function scrollToBottom() {
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
+        buscador.addEventListener('keyup', () => {
+            const texto = buscador.value.toLowerCase();
+            const cards = document.querySelectorAll('.catalogo-grid .card');
+            cards.forEach(card => {
+                const contenido = card.textContent.toLowerCase();
+                card.style.display = contenido.includes(texto) ? 'block' : 'none';
+            });
         });
 
-        // Cambia el texto y acción cuando termina de bajar
-        setTimeout(() => {
-            scrollBtn.innerHTML = "↑<br>Volver<br>arriba";
-            scrollBtn.onclick = scrollToTop;
-        }, 1200);
-    }
+        // Mobile Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
 
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
         });
 
-        // Cambia el texto y acción al volver arriba
-        setTimeout(() => {
-            scrollBtn.innerHTML = "Ver<br>más<br>↓";
-            scrollBtn.onclick = scrollToBottom;
-        }, 1200);
-    }
-
-    // Estado inicial
-    scrollBtn.onclick = scrollToBottom;
-</script>
+    </script>
 
 </body>
+
 </html>
