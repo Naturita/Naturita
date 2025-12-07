@@ -2,8 +2,9 @@ import os
 import sqlite3
 import json
 import subprocess
-from flask import Flask, render_template, request, redirect, url_for, session, g, jsonify
+from flask import Flask, render_template, request, redirect, url_for, session, g, jsonify, send_from_directory
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
 from bs4 import BeautifulSoup
 
 app = Flask(__name__, template_folder='.', static_folder='static')
@@ -70,6 +71,10 @@ def category_page(category_file):
     # This route is for testing the generated pages locally if needed,
     # but normally these are static files.
     return render_template(f'static/templates/catalogo/{category_file}')
+
+@app.route('/imagenes/<path:filename>')
+def serve_image(filename):
+    return send_from_directory('imagenes', filename)
 
 # --- Admin Routes ---
 
@@ -147,8 +152,20 @@ def add_product():
         price = request.form['price']
         quantity_unit = request.form['quantity_unit']
         extra_info = request.form['extra_info']
-        image_url = request.form['image_url']
         
+        image_url = ''
+        if 'image' in request.files:
+            file = request.files['image']
+            if file.filename != '':
+                filename = secure_filename(file.filename)
+                file.save(os.path.join('imagenes', filename))
+                # Use relative path compatible with existing structure
+                image_url = f'../../../imagenes/{filename}'
+        
+        # Fallback if no image uploaded (though usually required for new products)
+        if not image_url:
+             image_url = request.form.get('current_image_url', '')
+
         db = get_db()
         db.execute(
             'INSERT INTO products (category, name, description, price, quantity_unit, extra_info, image_url) VALUES (?, ?, ?, ?, ?, ?, ?)',
@@ -172,7 +189,14 @@ def edit_product(id):
         price = request.form['price']
         quantity_unit = request.form['quantity_unit']
         extra_info = request.form['extra_info']
-        image_url = request.form['image_url']
+        
+        image_url = request.form.get('current_image_url', '')
+        if 'image' in request.files:
+            file = request.files['image']
+            if file.filename != '':
+                filename = secure_filename(file.filename)
+                file.save(os.path.join('imagenes', filename))
+                image_url = f'../../../imagenes/{filename}'
         
         db.execute(
             'UPDATE products SET category = ?, name = ?, description = ?, price = ?, quantity_unit = ?, extra_info = ?, image_url = ? WHERE id = ?',

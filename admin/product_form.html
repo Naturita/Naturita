@@ -82,7 +82,7 @@
 
     <div class="form-card">
         <h2>{{ action }} Producto</h2>
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <label>Categoría</label>
             <select name="category" required>
                 <option value="granos_y_semillas" {% if product and product.category=='granos_y_semillas' %}selected{%
@@ -93,8 +93,8 @@
                     endif %}>Harinas y Derivados</option>
                 <option value="snack_cereales" {% if product and product.category=='snack_cereales' %}selected{% endif
                     %}>Snacks y Cereales</option>
-                <option value="granel" {% if product and product.category=='granel' %}selected{% endif %}>A Granel
-                </option>
+                <option value="granel" {% if product and product.category=='granel' %}selected{% endif %}>Productos a
+                    Granel</option>
                 <option value="vegetariano" {% if product and product.category=='vegetariano' %}selected{% endif %}>
                     Veganos y Vegetarianos</option>
                 <option value="suplementos" {% if product and product.category=='suplementos' %}selected{% endif %}>
@@ -108,7 +108,7 @@
                 <option value="fitness" {% if product and product.category=='fitness' %}selected{% endif %}>Fitness
                 </option>
                 <option value="endulzante" {% if product and product.category=='endulzante' %}selected{% endif %}>
-                    Endulzantes</option>
+                    Endulzantes y Naturales</option>
                 <option value="infusiones" {% if product and product.category=='infusiones' %}selected{% endif %}>
                     Infusiones y Hierbas</option>
                 <option value="freezados" {% if product and product.category=='freezados' %}selected{% endif %}>
@@ -130,8 +130,15 @@
             <label>Info Extra (ej: Rico en omega 3)</label>
             <input type="text" name="extra_info" value="{{ product.extra_info if product else '' }}">
 
-            <label>URL de Imagen (ej: ../../../imagenes/descarga1.jpeg)</label>
-            <input type="text" name="image_url" value="{{ product.image_url if product else '' }}" required>
+            <label>Imagen del Producto</label>
+            {% if product and product.image_url %}
+            <div style="margin-bottom: 10px;">
+                <img src="{{ product.image_url }}" alt="Actual" style="height: 100px; border-radius: 8px;">
+                <p style="font-size: 0.9em; color: #666;">Actual: {{ product.image_url }}</p>
+            </div>
+            {% endif %}
+            <input type="file" name="image" accept="image/*">
+            <input type="hidden" name="current_image_url" value="{{ product.image_url if product else '' }}">
 
             <button type="submit">Guardar Producto</button>
             <a href="{{ url_for('admin_dashboard') }}"><button type="button" class="cancel-btn">Cancelar</button></a>
