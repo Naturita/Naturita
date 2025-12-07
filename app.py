@@ -107,10 +107,33 @@ def admin_dashboard():
     if g.user is None:
         return redirect(url_for('login'))
     
+    search_query = request.args.get('search', '')
+    category_filter = request.args.get('category', '')
+    
     db = get_db()
-    products = db.execute('SELECT * FROM products ORDER BY category, name').fetchall()
+    
+    query = 'SELECT * FROM products WHERE 1=1'
+    params = []
+    
+    if search_query:
+        query += ' AND name LIKE ?'
+        params.append(f'%{search_query}%')
+    
+    if category_filter:
+        query += ' AND category = ?'
+        params.append(category_filter)
+        
+    query += ' ORDER BY category, name'
+    
+    products = db.execute(query, params).fetchall()
     sales = db.execute('SELECT * FROM sales ORDER BY created_at DESC LIMIT 50').fetchall()
-    return render_template('admin/dashboard.html', products=products, sales=sales)
+    
+    return render_template('admin/dashboard.html', 
+                           products=products, 
+                           sales=sales, 
+                           category_names=CATEGORY_NAMES,
+                           current_category=category_filter,
+                           current_search=search_query)
 
 @app.route('/admin/add_product', methods=('GET', 'POST'))
 def add_product():

@@ -195,7 +195,7 @@
             <div class="stat-card">
                 <div>
                     <h3>{{ products|length }}</h3>
-                    <p>Productos Activos</p>
+                    <p>Productos (Filtrados)</p>
                 </div>
                 <i class="fas fa-box fa-2x" style="color: #c1dfc4;"></i>
             </div>
@@ -209,6 +209,24 @@
         </div>
 
         <h2>Productos</h2>
+
+        <form method="get" action="{{ url_for('admin_dashboard') }}"
+            style="margin-bottom: 20px; display: flex; gap: 10px;">
+            <input type="text" name="search" placeholder="Buscar producto..." value="{{ current_search }}"
+                style="padding: 10px; border-radius: 8px; border: 1px solid #ddd; flex: 1;">
+            <select name="category" style="padding: 10px; border-radius: 8px; border: 1px solid #ddd; flex: 1;">
+                <option value="">Todas las Categorías</option>
+                {% for slug, name in category_names.items() %}
+                <option value="{{ slug }}" {% if current_category==slug %}selected{% endif %}>{{ name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+            {% if current_search or current_category %}
+            <a href="{{ url_for('admin_dashboard') }}" class="btn btn-danger"
+                style="display: flex; align-items: center;">Limpiar</a>
+            {% endif %}
+        </form>
+
         <table>
             <thead>
                 <tr>
@@ -225,7 +243,8 @@
                     <td><img src="{{ product.image_url }}" alt=""
                             style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;"></td>
                     <td>{{ product.name }}</td>
-                    <td>{{ product.category }}</td>
+                    <td>{{ category_names[product.category] if product.category in category_names else product.category
+                        }}</td>
                     <td>{{ product.price }}</td>
                     <td>
                         <a href="{{ url_for('edit_product', id=product.id) }}" class="action-icon"><i
